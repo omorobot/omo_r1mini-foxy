@@ -1,14 +1,14 @@
-# ROS packages for omorobot r1 mini
+# ROS2 packages for omorobot r1 mini
 
 ## Build source
 
-### CLone source
+### Clone source
 
 ```bash
   cd {$workspace_path}/src/
   git clone https://github.com/bishopearson/omo_r1mini.git
-  git clone https://github.com/YDLIDAR/YDLidar-SDK.git
-  git clone https://github.com/YDLIDAR/ydlidar_ros2_driver.git
+  git clone https://github.com/bishopearson/YDLidar-SDK.git
+  git clone https://github.com/bishopearson/ydlidar_ros2_driver.git
 ```
 
 ### Build LiDAR's SDK
