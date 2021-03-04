@@ -14,7 +14,6 @@ setup(
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*.launch.py'))),
         (os.path.join('share', package_name, 'param'), glob(os.path.join('param', '*.yaml'))),
-        # (os.path.join('share', package_name, 'script'), glob(os.path.join('script', '*')))
     ],
     install_requires=[
         'setuptools',
@@ -38,8 +37,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'omo_r1mini_mcu_node = scripts.omo_r1mini_mcu_node:main',
-            'omo_r1mini_motor_setting_node = scripts.omo_r1mini_motor_setting_node:main'
+            'omo_r1mini_mcu_node = omo_r1mini_bringup.scripts.omo_r1mini_mcu_node:main',
+            'omo_r1mini_motor_setting_node = omo_r1mini_bringup.scripts.omo_r1mini_motor_setting_node:main'
         ],
     },
 )
