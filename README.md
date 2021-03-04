@@ -53,6 +53,12 @@
   ros2 launch omo_r1mini_bringup omo_r1mini_bringup.launch.py
 ```
 
+- To bringup robot (in simulation environment)
+```bash
+  cd {$workspace_path}
+  ros2 launch omo_r1mini_gazebo omo_r1mini.launch.py
+```
+
 - To conduct SLAM (Try after few seconds from MCU and LiDAR bringup)
 
 ```bash
@@ -67,4 +73,3 @@
   ros2 launch omo_r1mini_navigation2 navigation2.launch.py
   ros2 launch omo_r1mini_navigation2 navigation2_rviz.launch.py
 ```
-  

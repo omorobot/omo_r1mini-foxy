@@ -1,0 +1,514 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="omo_r1mini">
+    <pose>0.0 0.0 0.02 0.0 0.0 0.0</pose>
+
+    <link name="base_footprint"/>
+
+    <joint name="base_joint" type="fixed">
+      <parent>base_footprint</parent>
+      <child>base_link</child>
+      <pose>0 0 0.05 0 0 0</pose>
+    </joint>
+
+    <link name="base_link">
+      <inertial>
+        <pose>-0.0435 0 -0.01805 0 0 0</pose>
+        <inertia>
+          <ixx>0.003083</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.004219</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.006769</izz>
+        </inertia>
+        <mass>2.0</mass>
+      </inertial>
+      <collision name="base_link_collision">
+        <pose>0 0 -0.01605 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/bases/body_assy.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="base_link_visual">
+        <pose>0 0 -0.01605 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/bases/body_assy.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="housing_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>housing_link</child>
+      <pose>0 0 0 0 0 0</pose>
+    </joint>
+
+    <link name="housing_link">
+      <inertial>
+        <pose>-0.0435 0 0.02245 0 0 0</pose>
+        <inertia>
+          <ixx>0.000154</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000211</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000338</izz>
+        </inertia>
+        <mass>0.1</mass>
+      </inertial>
+      <collision name="housing_link_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/bases/housing_body.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="housing_link_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/bases/housing_body.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+ 
+    <joint name="wheel_left_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>wheel_left_link</child>
+      <pose>0 0.0835 -0.01605 0 0 0</pose>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+    </joint>
+
+    <link name="wheel_left_link">
+      <inertial>
+        <pose>0 0.0835 -0.01605 1.57079633 0 0</pose>
+        <inertia>
+          <ixx>0.000032</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000032</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000053</izz>
+        </inertia>
+        <mass>0.1</mass>
+      </inertial>
+      <collision name="wheel_left_collision">
+        <pose>0 0.0835 -0.01605 1.57079633 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.033</radius>
+            <length>0.026</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100000.0</mu>
+              <mu2>100000.0</mu2>
+              <fdir1>1 1 0</fdir1>
+              <slip1>0.0</slip1>
+              <slip2>0.0</slip2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>100000</kp>
+              <kd>1</kd>
+              <max_vel>0.5</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <visual name="wheel_left_visual">
+        <pose>0 0.0835 -0.01605 0 0 1.57079633</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/wheels/wheel_assy.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="wheel_right_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>wheel_right_link</child>
+      <pose>0 -0.0835 -0.01605 -3.14159265 0 0</pose>
+      <axis>
+        <xyz>0 -1 0</xyz>
+      </axis>
+    </joint>
+
+    <link name="wheel_right_link">
+      <inertial>
+        <pose>0 -0.0835 -0.01605 1.57079633 0 0</pose>
+        <inertia>
+          <ixx>0.000032</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000032</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000053</izz>
+        </inertia>
+        <mass>0.1</mass>
+      </inertial>
+      <collision name="wheel_right_collision">
+        <pose>0 -0.0835 -0.01605 1.57079633 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.033</radius>
+            <length>0.026</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100000.0</mu>
+              <mu2>100000.0</mu2>
+              <fdir1>1 1 0</fdir1>
+              <slip1>0.0</slip1>
+              <slip2>0.0</slip2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>100000</kp>
+              <kd>1</kd>
+              <max_vel>0.5</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <visual name="wheel_right_visual">
+        <pose>0 -0.0835 -0.01605 0 0 -1.57079633</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/wheels/wheel_assy.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="caster_mount_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>caster_mount_link</child>
+      <pose>-0.10375 0.0 -0.00180 0 0 0</pose>
+    </joint>
+
+    <link name="caster_mount_link">
+      <inertial>
+        <pose>-0.10375 0.0 -0.00180 0 0 0</pose>
+        <inertia>
+          <ixx>0.000032</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000032</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000053</izz>
+        </inertia>
+        <mass>0.1</mass>
+      </inertial>
+      <collision name="caster_mount_link_collision">
+        <pose>-0.10375 0.0 -0.00180 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/wheels/caster_wheel_mount.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="caster_mount_link_visual">
+        <pose>-0.10375 0.0 -0.00180 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/wheels/caster_wheel_mount.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="caster_rotate_joint" type="fixed">
+      <parent>caster_mount_link</parent>
+      <child>caster_rotate_link</child>
+      <pose>0 0 -0.011 0 0 0</pose>
+    </joint>
+
+    <link name="caster_rotate_link">
+      <inertial>
+        <pose>-0.10375 0 -0.01280 0 0 0</pose>
+        <inertia>
+          <ixx>0.000032</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000032</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000053</izz>
+        </inertia>
+        <mass>0.1</mass>
+      </inertial>
+      <collision name="caster_rotate_link_collision">
+        <pose>-0.10375 0 -0.01280 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/wheels/caster_wheel_rotate.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="caster_rotate_link_visual">
+        <pose>-0.10375 0 -0.01280 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/wheels/caster_wheel_rotate.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="caster_wheel_joint" type="fixed">
+      <parent>caster_rotate_link</parent>
+      <child>caster_wheel_link</child>
+      <pose>-0.0115 0 -0.0195 0 0 0</pose>
+    </joint>
+
+    <link name="caster_wheel_link">
+      <inertial>
+        <pose>-0.11525 0 -0.0323 0 0 0</pose>
+        <inertia>
+          <ixx>0.000032</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000032</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000053</izz>
+        </inertia>
+        <mass>0.1</mass>
+      </inertial>
+      <collision name="caster_wheel_link_collision">
+        <pose>-0.11525 0 -0.0423 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.005000</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+              <fdir1>1 1 0</fdir1>
+              <slip1>1.0</slip1>
+              <slip2>1.0</slip2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="caster_wheel_link_visual">
+        <pose>-0.11525 0 -0.0323 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/wheels/caster_wheel.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name="imu_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>imu_link</child>
+      <pose>-0.02 0.01 0.015 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <link name="imu_link">
+      <sensor name="omo_r1mini_imu" type="imu">
+        <always_on>true</always_on>
+        <update_rate>200</update_rate>
+        <imu>
+          <angular_velocity>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+        <plugin name="omo_r1mini_imu" filename="libgazebo_ros_imu_sensor.so">
+          <ros>
+            <remapping>~/out:=imu</remapping>
+          </ros>
+        </plugin>
+      </sensor>
+    </link>
+
+    <joint name="lidar_joint" type="fixed">
+      <parent>base_link</parent>
+      <child>base_scan</child>
+      <pose>0 0 0.081 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <link name="base_scan">
+      <inertial>
+        <pose>-0.015 0 0.0635 0 0 0</pose>
+        <inertia>
+          <ixx>0.000141</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000221</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000253</izz>
+        </inertia>
+        <mass>0.2</mass>
+      </inertial>
+
+      <collision name="lidar_sensor_collision">
+        <pose>0 0 0.036 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/sensors/ydlidar_assy.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="lidar_sensor_visual">
+        <pose>0 0 0.036 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://omo_r1mini/meshes/sensors/ydlidar_assy.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <sensor name="ydlidar" type="ray">
+        <always_on>true</always_on>
+        <visualize>true</visualize>
+        <pose>0 0 0.081 0 0 0</pose>
+        <update_rate>5</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1.000000</resolution>
+              <min_angle>0.000000</min_angle>
+              <max_angle>6.280000</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.120000</min>
+            <max>3.0</max>
+            <resolution>0.015000</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </ray>
+        <plugin name="omo_r1mini_laserscan" filename="libgazebo_ros_ray_sensor.so">
+          <ros>
+            <remapping>~/out:=scan</remapping>
+          </ros>
+          <output_type>sensor_msgs/LaserScan</output_type>
+          <frame_name>base_scan</frame_name>
+        </plugin>
+      </sensor>
+    </link>
+
+    <plugin name="omo_r1mini_diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <update_rate>30</update_rate>
+
+      <left_joint>wheel_left_joint</left_joint>
+      <right_joint>wheel_right_joint</right_joint>
+
+      <wheel_separation>0.170</wheel_separation>
+      <wheel_diameter>0.067</wheel_diameter>
+
+      <max_wheel_torque>40</max_wheel_torque>
+      <max_wheel_acceleration>1.0</max_wheel_acceleration>
+
+      <command_topic>cmd_vel</command_topic>
+
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>false</publish_wheel_tf>
+
+      <odometry_topic>odom</odometry_topic>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+
+    </plugin>
+
+    <plugin name="omo_r1mini_joint_state" filename="libgazebo_ros_joint_state_publisher.so">
+      <ros>
+        <remapping>~/out:=joint_states</remapping>
+      </ros>
+      <update_rate>30</update_rate>
+      <joint_name>wheel_left_joint</joint_name>
+      <joint_name>wheel_right_joint</joint_name>
+    </plugin>
+
+  </model>
+</sdf>
