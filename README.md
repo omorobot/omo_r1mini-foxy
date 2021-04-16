@@ -6,9 +6,9 @@
 
 ```bash
   cd {$workspace_path}/src/
-  git clone https://github.com/bishopearson/omo_r1mini.git
-  git clone https://github.com/bishopearson/YDLidar-SDK.git
-  git clone https://github.com/bishopearson/ydlidar_ros2_driver.git
+  git clone https://github.com/PinkWink/omo_r1mini-foxy.git
+  git clone https://github.com/PinkWink/YDLidar-SDK.git
+  git clone https://github.com/PinkWink/ydlidar_ros2_driver.git
 ```
 
 ### Build LiDAR's SDK
