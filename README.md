@@ -6,7 +6,7 @@
 
 ```bash
   cd {$workspace_path}/src/
-  git clone https://github.com/PinkWink/omo_r1mini-foxy.git
+  git clone https://github.com/omorobot/omo_r1mini-foxy.git
   git clone https://github.com/PinkWink/YDLidar-SDK.git
   git clone https://github.com/PinkWink/ydlidar_ros2_driver.git
 ```
@@ -57,6 +57,12 @@
 ```bash
   cd {$workspace_path}
   ros2 launch omo_r1mini_gazebo omo_r1mini.launch.py
+```
+- To teleoperate the robot using KEYBOARD
+
+```bash
+  cd {$workspace_path}
+  ros2 run omo_r1mini_teleop teleop_keyboard
 ```
 
 - To conduct SLAM (Try after few seconds from MCU and LiDAR bringup)
