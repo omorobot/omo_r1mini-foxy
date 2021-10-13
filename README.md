@@ -1,7 +1,7 @@
 # ROS2 packages for omorobot r1 mini
 
-This project is to demonstrate R1mini control and navigation in ROS2-foxy environment.
-한국어 사용자는 다음 **한국어**[문서](README_KR.md)문서를 참조하십시오.  
+This project is to demonstrate R1mini control and navigation in ROS2-foxy environment.  
+한국어 사용자는 다음 **한국어**[문서](README_KR.md)를 참조하십시오.  
 
 ## Build source
 
