@@ -42,10 +42,13 @@ This project is to demonstrate R1mini control and navigation in ROS2-foxy enviro
 
 ### Install additional packages
 
-This package requires gazebo, cartographer-ros packages.  
+Following additional packages may be reuqired to be installed.  
+- gazebo 
+- cartographer-ros  
+- nav2_map_server
 
 ```bash
-sudo apt install -y ros-foxy-gazebo-ros ros-foxy-cartographer-ros
+sudo apt install -y ros-foxy-gazebo-ros ros-foxy-cartographer-ros ros-foxy-nav2-map-server
 
 ```
 
@@ -54,40 +57,47 @@ sudo apt install -y ros-foxy-gazebo-ros ros-foxy-cartographer-ros
 - To give authority for driver access to MCU and LiDAR
 
 ```bash
-  cd {$workspace_path}/src/omo_r1mini/omo_r1mini_bringup
-  sudo sh create_udev_rules.sh
+cd {$workspace_path}/src/omo_r1mini/omo_r1mini_bringup
+sudo sh create_udev_rules.sh
 ```
 
 - To bringup robot
 
 ```bash
-  cd {$workspace_path}
-  ros2 launch omo_r1mini_bringup omo_r1mini_bringup.launch.py
+cd {$workspace_path}
+ros2 launch omo_r1mini_bringup omo_r1mini_bringup.launch.py
 ```
 
-- To bringup robot (in simulation environment)
+- To bringup robot (in **simulation environment**)
 ```bash
-  cd {$workspace_path}
-  ros2 launch omo_r1mini_gazebo omo_r1mini.launch.py
+cd {$workspace_path}
+ros2 launch omo_r1mini_gazebo omo_r1mini.launch.py
 ```
-- To teleoperate the robot using KEYBOARD
+- To teleoperate the robot using **KEYBOARD**
 
 ```bash
-  cd {$workspace_path}
-  ros2 run omo_r1mini_teleop teleop_keyboard
+cd {$workspace_path}
+ros2 run omo_r1mini_teleop teleop_keyboard
 ```
 
 - To conduct SLAM (Try after few seconds from MCU and LiDAR bringup)
 
 ```bash
-  cd {$workspace_path}
-  ros2 launch omo_r1mini_cartographer cartographer.launch.py
-  ros2 launch omo_r1mini_cartographer cartographer_rviz.launch.py
+cd {$workspace_path}
+ros2 launch omo_r1mini_cartographer cartographer.launch.py
+ros2 launch omo_r1mini_cartographer cartographer_rviz.launch.py
+```
+
+- Once mapping is done, you can create map.pgm and map.yaml file by executing
+
+```bash
+cd {$HOME}
+ros2 run nav2_map_server map_saver_cli -f map
 ```
 
 - To conduct path planning & following (Try after few seconds from MCU and LiDAR bringup)
 ```bash
-  cd {$workspace_path}
-  ros2 launch omo_r1mini_navigation2 navigation2.launch.py
-  ros2 launch omo_r1mini_navigation2 navigation2_rviz.launch.py
+cd {$workspace_path}
+ros2 launch omo_r1mini_navigation2 navigation2.launch.py map:=$HOME/map.yaml
+ros2 launch omo_r1mini_navigation2 navigation2_rviz.launch.py
 ```
