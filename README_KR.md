@@ -25,6 +25,7 @@ workspace_path 는 ros2의 작업공간입니다(workspace)
 
 다음 패키지들이 필요할 수 있습니다.  
 - gazebo 
+- ros-foxy-gazebo-ros-pkgs
 - cartographer-ros  
 - nav2_map_server
 - nav2_bringup
@@ -32,7 +33,8 @@ workspace_path 는 ros2의 작업공간입니다(workspace)
 ```bash
 sudo apt install -y ros-foxy-gazebo-ros\
  ros-foxy-cartographer-ros\
- ros-foxy-nav2-map-server
+ ros-foxy-nav2-map-server\
+ ros-foxy-gazebo-ros-pkgs
 
 ```
 
