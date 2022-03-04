@@ -23,7 +23,22 @@ This project is to demonstrate R1mini control and navigation in ROS2-foxy enviro
   make
   sudo make install
 ```
-  
+
+### Install dependency packages
+
+Following additional packages may be reuqired to be installed.  
+- gazebo 
+- ros-foxy-gazebo-ros-pkgs
+- cartographer-ros  
+- nav2_map_server
+- pyserial
+
+```bash
+sudo apt install -y ros-foxy-gazebo-ros ros-foxy-cartographer-ros ros-foxy-nav2-map-server ros-foxy-gazebo-ros-pkgs
+
+pip install pyserial
+```
+
 ### Build ROS2 source
 
 - To build
@@ -38,19 +53,6 @@ This project is to demonstrate R1mini control and navigation in ROS2-foxy enviro
 ```bash
   cd {$workspace_path}
   ./install/setup.bash
-```
-
-### Install additional packages
-
-Following additional packages may be reuqired to be installed.  
-- gazebo 
-- ros-foxy-gazebo-ros-pkgs
-- cartographer-ros  
-- nav2_map_server
-
-```bash
-sudo apt install -y ros-foxy-gazebo-ros ros-foxy-cartographer-ros ros-foxy-nav2-map-server ros-foxy-gazebo-ros-pkgs
-
 ```
 
 ## Play with the robot

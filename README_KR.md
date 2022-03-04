@@ -29,6 +29,7 @@ workspace_path 는 ros2의 작업공간입니다(workspace)
 - cartographer-ros  
 - nav2_map_server
 - nav2_bringup
+- pyserial : 파이썬에서 serial을 import하기 위함
 
 ```bash
 sudo apt install -y ros-foxy-gazebo-ros\
@@ -36,6 +37,7 @@ sudo apt install -y ros-foxy-gazebo-ros\
  ros-foxy-nav2-map-server\
  ros-foxy-gazebo-ros-pkgs
 
+pip install pyserial
 ```
 
 ### ROS2 소스코드 빌드하기
