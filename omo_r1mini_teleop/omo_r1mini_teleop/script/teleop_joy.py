@@ -64,7 +64,7 @@ class TeleopJoyNode(Node):
             [0,0,255], [0,5,255], [100,0,255], [255,255,255] ]
         # Get parameter values
         print('__________Params_______________')
-        #print(self.get_parameter('max_fwd_m_s'))
+        print(self.get_parameter('max_fwd_m_s'))
         self.max_fwd_vel = 0.2#self.get_parameter('/max_fwd_m_s').get_parameter_value().double_value #OMO_R1mini_MAX_LIN_VEL = 1.20
         self.max_rev_vel = 0.2#self.get_parameter('/max_rev_m_s').get_parameter_value().double_value 
         self.max_ang_vel = 2.0#self.get_parameter('/max_deg_s').get_parameter_value().double_value 

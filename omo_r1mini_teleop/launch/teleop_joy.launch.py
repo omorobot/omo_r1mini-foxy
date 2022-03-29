@@ -26,17 +26,17 @@ def generate_launch_description():
   joy_dev = LaunchConfiguration('joy_dev')
 
   return LaunchDescription([
-    #DeclareLaunchArgument(
-    #  'teleop_joy_parameter',
-    #  default_value=teleop_joy_parameter
-    #),
+    DeclareLaunchArgument(
+      'teleop_joy_parameter',
+      default_value=teleop_joy_parameter
+    ),
     Node(
       package='omo_r1mini_teleop',
       executable='teleop_joy',
       name='teleop_joy',
       output='screen',
       emulate_tty=True,
-      parameters=[{'max_fwd_m_s':0.24}],
+      parameters=[teleop_joy_parameter],
       namespace='/',
     ),
     DeclareLaunchArgument(
