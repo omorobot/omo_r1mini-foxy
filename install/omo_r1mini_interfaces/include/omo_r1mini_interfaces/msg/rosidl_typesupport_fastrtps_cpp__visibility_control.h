@@ -1,1 +1,0 @@
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h

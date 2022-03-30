@@ -1,9 +1,0 @@
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_cartographer/CMakeFiles/install/strip.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_cartographer/CMakeFiles/install/local.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_cartographer/CMakeFiles/install.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_cartographer/CMakeFiles/list_install_components.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_cartographer/CMakeFiles/rebuild_cache.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_cartographer/CMakeFiles/edit_cache.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_cartographer/CMakeFiles/test.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_cartographer/CMakeFiles/omo_r1mini_cartographer_uninstall.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_cartographer/CMakeFiles/uninstall.dir

@@ -18,28 +18,25 @@ from omo_r1mini_interfaces.srv import ResetOdom
 from omo_r1mini_interfaces.srv import Onoff
 from omo_r1mini_interfaces.srv import Calg
 
-#from .driver.packet import *
-#from .driver.port import *
-#from .driver.template import *
 from .calc.quaternion_from_euler import *
 from .omo_packet_handler import PacketHandler
 
 class OdomPose(object):
-    x = 0.0
-    y = 0.0
-    theta = 0.0
-    timestamp = 0
-    pre_timestamp = 0
+  x = 0.0
+  y = 0.0
+  theta = 0.0
+  timestamp = 0
+  pre_timestamp = 0
 
 class OdomVel(object):
-    x = 0.0
-    y = 0.0
-    w = 0.0
+  x = 0.0
+  y = 0.0
+  w = 0.0
 
 class Joint(object):
-    joint_name = ['wheel_left_joint', 'wheel_right_joint']
-    joint_pos = [0.0, 0.0]
-    joint_vel = [0.0, 0.0]
+  joint_name = ['wheel_left_joint', 'wheel_right_joint']
+  joint_pos = [0.0, 0.0]
+  joint_vel = [0.0, 0.0]
 
 class ComplementaryFilter():
   def __init__(self):
@@ -71,11 +68,9 @@ class ComplementaryFilter():
       return 0
 
     gyro -= self.gyro_bias
-
     self.pre_theta = self.theta
     temp = -1/self.filter_coef * (-self.wheel_ang + self.pre_theta) + gyro
     self.theta = self.pre_theta + temp*d_time
-
     #print self.theta*180/3.141, self.wheel_ang*180/3.141, gyro, d_time
     return self.theta
 
@@ -93,6 +88,7 @@ class OMOR1MiniNode(Node):
     self.use_gyro = self.get_parameter_or('/sensor/use_gyro', Parameter('/sensor/use_gyro', Parameter.Type.BOOL, False)).get_parameter_value().bool_value
     self.distance_per_pulse = 2*math.pi*self.wheel_radius / self.enc_pulse / self.gear_ratio
 
+    # Packet handler
     self.ph = PacketHandler(_port_name, _port_baudrate)
     self.ph.ser.reset_input_buffer() 
     self.ph.ser.reset_output_buffer() 
@@ -112,18 +108,19 @@ class OMOR1MiniNode(Node):
                 Parameter('/motor/max_lin_vel_x', Parameter.Type.DOUBLE, 1.2)).get_parameter_value().double_value#rospy.get_param("~max_lin_vel_x")
     self.max_ang_vel_z = self.get_parameter_or('/motor/max_ang_vel_z', 
                 Parameter('/motor/max_ang_vel_z', Parameter.Type.DOUBLE, 2.5)).get_parameter_value().double_value#rospy.get_param("~max_ang_vel_z")
-    #self.odom_pose = OdomPose()
+    self.odom_pose = OdomPose()
+    self.odom_pose.timestamp = self.get_clock().now()
+    self.odom_pose.pre_timestamp = self.get_clock().now()
     self.odom_vel = OdomVel()
     self.joint = Joint()
-    
-    
-
+  
     # Services
     self.srvHeadlight = self.create_service(Onoff, 'set_headlight', self.cbSrv_headlight)
     self.srvSetColor = self.create_service(Color, 'set_rgbled', self.cbSrv_setColor)
     self.srvResetODOM = self.create_service(Onoff, 'reset_odom', self.cbSrv_resetODOM)
     self.srvCheckBAT = self.create_service(Battery, 'check_battery', self.cbSrv_checkBattery)
 
+    # Init data
     self.d_odom_pose = \
     {
       'x': 0.0,
@@ -132,26 +129,6 @@ class OMOR1MiniNode(Node):
       'time_now': self.get_clock().now(),
       'time_prev': self.get_clock().now()
     }
-    
-    # Init data
-    """
-    self.last_pos = [0.0, 0.0]
-
-
-    self.packet = Packet(Port(_port_name, _port_baudrate))
-
-    self.d_target_twist = copy.deepcopy(template_write_['VW']['data'])
-    self.d_current_twist = copy.deepcopy(template_read_['VW']['data'])
-    self.d_current_accl = copy.deepcopy(template_read_['ACCL']['data'])
-    self.d_current_pose = copy.deepcopy(template_read_['POSE']['data'])
-    self.d_current_gyro = copy.deepcopy(template_read_['GYRO']['data'])
-    self.d_current_odo = copy.deepcopy(template_read_['ODO']['data'])
-    self.d_current_diffv = copy.deepcopy(template_read_['DIFFV']['data'])
-    self.d_setHDLT = copy.deepcopy(template_write_['HDLT']['data'])
-    self.d_setCOLOR = copy.deepcopy(template_write_['COLOR']['data'])
-    self.d_setODO = copy.deepcopy(template_write_['ODO']['data'])
-    self.d_getBAT = copy.deepcopy(template_read_['BAT']['data'])
-    """
 
     # Set subscriber
     self.subCmdVelMsg = self.create_subscription(Twist, 'cmd_vel', self.cbCmdVelMsg, 10)
@@ -171,7 +148,6 @@ class OMOR1MiniNode(Node):
     self.ph.set_periodic_info()
     
     # Set timer proc
-    #self.timerProc = self.create_timer(0.05, self.cbTimerProc)
     self.timerProc = self.create_timer(0.01, self.update_robot)
 
     # def __del__(self):
@@ -186,37 +162,30 @@ class OMOR1MiniNode(Node):
     trans_vel /= 1000.
     orient_vel /= 1000.
 
-    #self.odom_pose.timestamp = rospy.Time.now()
-    self.d_odom_pose['time_now'] = self.get_clock().now()
-    #self.odom_pose.timestamp = self.get_clock().now()
-    #dt = (self.odom_pose.timestamp - self.odom_pose.pre_timestamp).to_sec()
-    dt = (self.d_odom_pose['time_now'] - self.d_odom_pose['time_prev']).nanoseconds * 1e-9
-    #self.odom_pose.pre_timestamp = self.odom_pose.timestamp
-    self.d_odom_pose['time_prev'] = self.d_odom_pose['time_now']
+    self.odom_pose.timestamp = self.get_clock().now()
+    dt = (self.odom_pose.timestamp - self.odom_pose.pre_timestamp).nanoseconds * 1e-9
+    self.odom_pose.pre_timestamp = self.odom_pose.timestamp
 
     if self.use_gyro:
         self.calc_yaw.wheel_ang += orient_vel * dt
-        #self.odom_pose.theta = self.calc_yaw.calc_filter(vel_z*math.pi/180., dt)
-        self.d_odom_pose['theta'] = self.calc_yaw.calc_filter(vel_z*math.pi/180., dt)
+        self.odom_pose.theta = self.calc_yaw.calc_filter(vel_z*math.pi/180., dt)
         self.get_logger().info('R1mini state : whl pos %1.2f, %1.2f, gyro : %1.2f, whl odom : %1.2f, robot theta : %1.2f' 
                     %(odo_l, odo_r, vel_z,
                     self.calc_yaw.wheel_ang*180/math.pi, 
                     self.d_odom_pose['theta']*180/math.pi ))
     else:
-        self.d_odom_pose['theta'] += orient_vel * dt
+        #self.d_odom_pose['theta'] += orient_vel * dt
+        self.odom_pose.theta += orient_vel * dt
         #rospy.loginfo('R1mini state : wheel pos %s, %s, speed %s, %s',
         #                odo_l, odo_r, trans_vel, orient_vel)
 
-    d_x = trans_vel * math.cos(self.d_odom_pose['theta']) 
-    d_y = trans_vel * math.sin(self.d_odom_pose['theta']) 
-
-    #self.odom_pose.x += d_x * dt
-    #self.odom_pose.y += d_y * dt
-    self.d_odom_pose['x']+= d_x * dt
-    self.d_odom_pose['y']+= d_y * dt
+    d_x = trans_vel * math.cos(self.odom_pose.theta) 
+    d_y = trans_vel * math.sin(self.odom_pose.theta) 
+    self.odom_pose.x += d_x * dt
+    self.odom_pose.y += d_y * dt
     self.get_logger().info('ODO X:%s, Y:%s, Theta:%s'
-        %(self.d_odom_pose['x'],self.d_odom_pose['y'],self.d_odom_pose['theta']))
-    odom_orientation_quat = quaternion_from_euler(0, 0, self.d_odom_pose['theta'])
+        %(self.odom_pose.x,self.odom_pose.y,self.odom_pose.theta))
+    odom_orientation_quat = quaternion_from_euler(0, 0, self.odom_pose.theta)
 
     self.odom_vel.x = trans_vel
     self.odom_vel.y = 0.
@@ -227,23 +196,16 @@ class OMOR1MiniNode(Node):
     odom = Odometry()
     odom.header.frame_id = "odom"
     odom.child_frame_id = "base_footprint"
-
-    #self.odom_broadcaster.sendTransform((self.d_odom_pose['x'], self.d_odom_pose['y'], 0.), 
-    #                                        odom_orientation_quat, self.odom_pose.timestamp, 
-    #                                        odom.child_frame_id, odom.header.frame_id)
-
     odom.header.stamp = timestamp_now
-    #odom.pose.pose = Pose(Point(self.odom_pose.x, self.odom_pose.y, 0.), Quaternion(*odom_orientation_quat))
-    #odom.pose.pose = Pose(Point(self.d_odom_pose['x'], self.d_odom_pose['y'], 0.), Quaternion(*odom_orientation_quat))
-    odom.pose.pose.position.x = self.d_odom_pose['x']
-    odom.pose.pose.position.y = self.d_odom_pose['y']
+    odom.pose.pose.position.x = self.odom_pose.x
+    odom.pose.pose.position.y = self.odom_pose.y
     odom.pose.pose.position.z = 0.0
-    #odom.twist.twist = Twist(Vector3(self.odom_vel.x, self.odom_vel.y, 0), Vector3(0, 0, self.odom_vel.w))
     odom.twist.twist.linear.x = trans_vel
     odom.twist.twist.linear.y = 0.0
     odom.twist.twist.angular.z = orient_vel
-    #self.odom_pub.publish(odom)
+
     self.pub_Odom.publish(odom)
+
     # Set odomTF data
     odom_tf = TransformStamped()
     odom_tf.header.frame_id = odom.header.frame_id
@@ -281,26 +243,12 @@ class OMOR1MiniNode(Node):
 
     joint_states = JointState()
     joint_states.header.frame_id = "base_link"
-    joint_states.header.stamp = timestamp_now #rospy.Time.now()
+    joint_states.header.stamp = timestamp_now
     joint_states.name = self.joint.joint_name
     joint_states.position = self.joint.joint_pos
     joint_states.velocity = self.joint.joint_vel
     joint_states.effort = []
-
     self.pub_JointStates.publish(joint_states)
-    # Set jointstates data
-
-    #joint_state_msg = JointState()
-    #joint_state_msg.header.frame_id = 'base_link'
-    #joint_state_msg.header.stamp = timestamp_now
-
-    #joint_state_msg.name = ['wheel_left_joint', 'wheel_right_joint']
-
-    #now_pos = [odo_l / (self.wheel_radius) * 1.372495196, odo_r / (self.wheel_radius) * 1.372495196] # TODO: Remove bias : 1.372495196
-    #joint_state_msg.position = now_pos
-
-    #joint_state_msg.velocity = [float(self.d_current_diffv['left']), float(self.d_current_diffv['right'])]
-    #self.pub_JointStates.publish(joint_state_msg)
 
   def update_robot(self):
     raw_data = self.ph.parser()

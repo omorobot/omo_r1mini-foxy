@@ -1,9 +1,0 @@
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_gazebo/CMakeFiles/install/strip.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_gazebo/CMakeFiles/install/local.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_gazebo/CMakeFiles/install.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_gazebo/CMakeFiles/list_install_components.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_gazebo/CMakeFiles/rebuild_cache.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_gazebo/CMakeFiles/edit_cache.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_gazebo/CMakeFiles/test.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_gazebo/CMakeFiles/omo_r1mini_gazebo_uninstall.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_gazebo/CMakeFiles/uninstall.dir
