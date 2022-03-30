@@ -10,7 +10,9 @@ omo_r1mini_node:
 
     motor:
       gear_ratio: 213
-
+      max_lin_vel_x: 2.0
+      max_rot_vel_z: 2.5
+      
     sensor:
       enc_pulse: 44
 
