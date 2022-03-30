@@ -1,9 +1,0 @@
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2/CMakeFiles/install/strip.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2/CMakeFiles/install.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2/CMakeFiles/list_install_components.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2/CMakeFiles/rebuild_cache.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2/CMakeFiles/edit_cache.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2/CMakeFiles/test.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2/CMakeFiles/install/local.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2/CMakeFiles/omo_r1mini_navigation2_uninstall.dir
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2/CMakeFiles/uninstall.dir

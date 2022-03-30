@@ -1,6 +1,0 @@
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/Battery.idl
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/Calg.idl
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/Color.idl
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/Onoff.idl
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/ResetOdom.idl
-/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/SaveColor.idl
