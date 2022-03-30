@@ -7,6 +7,13 @@ import time
 from .driver.packet import *
 from .driver.port import *
 
+from omo_r1mini_bringup.srv import Battery, BatteryResponse
+from omo_r1mini_bringup.srv import Color, ColorResponse
+from omo_r1mini_bringup.srv import SaveColor, SaveColorResponse
+from omo_r1mini_bringup.srv import ResetOdom, ResetOdomResponse
+from omo_r1mini_bringup.srv import Onoff, OnoffResponse
+from omo_r1mini_bringup.srv import Calg, CalgResponse
+
 class OMOR1MiniMotorSettingNode(Node):
   def __init__(self):
     super().__init__('omo_r1mini_motor_setting')

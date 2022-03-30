@@ -1,0 +1,4 @@
+---
+float64 volt
+float64 SOC
+float64 current

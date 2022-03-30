@@ -16,7 +16,15 @@ endif()
 # Find ament packages and libraries for ament and system dependencies
 ################################################################################
 find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "srv/Calg.srv"
+  "srv/Color.srv"
+  "srv/Onoff.srv"
+  "srv/ResetOdom.srv"
+  "srv/SaveColor.srv"
+)
 ################################################################################
 # Install
 ################################################################################
