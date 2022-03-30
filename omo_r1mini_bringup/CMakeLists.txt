@@ -16,9 +16,11 @@ endif()
 # Find ament packages and libraries for ament and system dependencies
 ################################################################################
 find_package(ament_cmake REQUIRED)
+find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
+  "srv/Battery.srv"
   "srv/Calg.srv"
   "srv/Color.srv"
   "srv/Onoff.srv"
