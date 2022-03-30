@@ -1,36 +1,4 @@
 #!/usr/bin/env python
-#
-# Copyright (c) 2011, Willow Garage, Inc.
-# All rights reserved.
-#
-# Software License Agreement (BSD License 2.0)
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions
-# are met:
-#
-#  * Redistributions of source code must retain the above copyright
-#    notice, this list of conditions and the following disclaimer.
-#  * Redistributions in binary form must reproduce the above
-#    copyright notice, this list of conditions and the following
-#    disclaimer in the documentation and/or other materials provided
-#    with the distribution.
-#  * Neither the name of {copyright_holder} nor the names of its
-#    contributors may be used to endorse or promote products derived
-#    from this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-# POSSIBILITY OF SUCH DAMAGE.
 
 # Author: Kyuhyong You
 
@@ -54,7 +22,14 @@ ANG_VEL_STEP_SIZE = 0.1
 class TeleopJoyNode(Node):
 
     def __init__(self):
-        super().__init__('teleop_joy')
+        super().__init__('teleop_joy_node')
+        self.declare_parameters(
+            namespace='',
+            parameters=[
+                ('max_fwd_m_s', None),
+                ('max_rev_m_s', None),
+                ('max_deg_s', None),
+            ])
         self.timer_inc = 0
         self.auto_mode = False
         self.headlight_on = False
@@ -62,12 +37,11 @@ class TeleopJoyNode(Node):
         self.colorIdx = 0
         self.colors = [ [255, 0, 0], [255,50, 0], [255,255,0], [0,255,0], 
             [0,0,255], [0,5,255], [100,0,255], [255,255,255] ]
+        print(' R1mini Teleop Joystick controller')
         # Get parameter values
-        print('__________Params_______________')
-        print(self.get_parameter('max_fwd_m_s'))
-        self.max_fwd_vel = 0.2#self.get_parameter('/max_fwd_m_s').get_parameter_value().double_value #OMO_R1mini_MAX_LIN_VEL = 1.20
-        self.max_rev_vel = 0.2#self.get_parameter('/max_rev_m_s').get_parameter_value().double_value 
-        self.max_ang_vel = 2.0#self.get_parameter('/max_deg_s').get_parameter_value().double_value 
+        self.max_fwd_vel = self.get_parameter_or('max_fwd_m_s', Parameter('max_fwd_m_s', Parameter.Type.DOUBLE, 0.2)).get_parameter_value().double_value
+        self.max_rev_vel = self.get_parameter_or('max_rev_m_s', Parameter('max_rev_m_s', Parameter.Type.DOUBLE, 0.2)).get_parameter_value().double_value
+        self.max_ang_vel = self.get_parameter_or('max_deg_s', Parameter('max_deg_s', Parameter.Type.DOUBLE, 0.2)).get_parameter_value().double_value
         print('Param max fwd: %s m/s, max rev: -%s m/s, max ang: %s dev/s'%
             (self.max_fwd_vel,
             self.max_rev_vel,
@@ -115,6 +89,7 @@ class TeleopJoyNode(Node):
         self.twist.angular.x = 0.0; 
         self.twist.angular.y = 0.0; 
         self.twist.angular.z = joymsg.axes[0] * self.max_ang_vel
+        print('V= %.2f m/s, W= %.2f deg/s'%(self.twist.linear.x, self.twist.angular.z))
 
     def cb_timer(self):
         self.timer_inc+=1
@@ -125,7 +100,6 @@ def main(args=None):
     rclpy.init(args=args)
     teleop_joy =  TeleopJoyNode()
     rclpy.spin(teleop_joy)
-
     teleop_joy.destroy_node()
     rclpy.shutdown()
 
