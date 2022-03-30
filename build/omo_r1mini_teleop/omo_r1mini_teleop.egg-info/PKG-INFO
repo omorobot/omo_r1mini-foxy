@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: omo-r1mini-teleop
+Version: 2.1.2
+Summary: Teleoperation node using keyboard or joystick for the OMORobot R1 Mini
+Home-page: UNKNOWN
+Author: Bishop Pearson
+Author-email: bishopearson@gmail.com
+Maintainer: Bishop Pearson
+Maintainer-email: bishopearson@gmail.com
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Keywords: ROS
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development

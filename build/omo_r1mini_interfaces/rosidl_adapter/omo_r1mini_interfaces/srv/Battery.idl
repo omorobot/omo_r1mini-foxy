@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from omo_r1mini_interfaces/srv/Battery.srv
+// generated code does not contain a copyright notice
+
+
+module omo_r1mini_interfaces {
+  module srv {
+    struct Battery_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct Battery_Response {
+      double volt;
+
+      double soc;
+
+      double current;
+    };
+  };
+};

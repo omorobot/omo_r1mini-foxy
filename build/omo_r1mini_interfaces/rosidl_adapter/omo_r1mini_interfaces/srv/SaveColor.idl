@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from omo_r1mini_interfaces/srv/SaveColor.srv
+// generated code does not contain a copyright notice
+
+
+module omo_r1mini_interfaces {
+  module srv {
+    struct SaveColor_Request {
+      int64 red;
+
+      int64 green;
+
+      int64 blue;
+    };
+    struct SaveColor_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

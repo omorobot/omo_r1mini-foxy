@@ -1,0 +1,50 @@
+[0.217s] Invoking command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy /usr/bin/cmake /home/r1mini/ros2_ws/src/omo_r1mini-foxy/omo_r1mini_navigation2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2
+[0.897s] -- The C compiler identification is GNU 9.4.0
+[1.507s] -- The CXX compiler identification is GNU 9.4.0
+[1.555s] -- Check for working C compiler: /usr/bin/cc
+[2.240s] -- Check for working C compiler: /usr/bin/cc -- works
+[2.251s] -- Detecting C compiler ABI info
+[3.056s] -- Detecting C compiler ABI info - done
+[3.126s] -- Detecting C compile features
+[3.130s] -- Detecting C compile features - done
+[3.150s] -- Check for working CXX compiler: /usr/bin/c++
+[4.003s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[4.038s] -- Detecting CXX compiler ABI info
+[4.972s] -- Detecting CXX compiler ABI info - done
+[5.055s] -- Detecting CXX compile features
+[5.060s] -- Detecting CXX compile features - done
+[5.082s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[5.420s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[5.421s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[7.286s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[8.290s] -- Configuring done
+[8.313s] -- Generating done
+[8.327s] -- Build files have been written to: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2
+[9.290s] Invoked command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy /usr/bin/cmake /home/r1mini/ros2_ws/src/omo_r1mini-foxy/omo_r1mini_navigation2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2
+[9.306s] Invoking command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy /usr/bin/cmake --build /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2 -- -j4 -l4
+[9.648s] Invoked command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy /usr/bin/cmake --build /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2 -- -j4 -l4
+[9.854s] Invoking command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy /usr/bin/cmake --install /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2
+[9.964s] -- Install configuration: ""
+[9.966s] -- Execute custom install script
+[9.986s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/launch/navigation2.launch.py
+[10.052s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/launch/navigation2_rviz.launch.py
+[10.142s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/map/turtlebot3_world.pgm
+[10.225s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/map/turtlebot3_world.yaml
+[10.311s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/param/omo_r1mini.yaml
+[10.398s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/rviz/tb3_navigation2.rviz
+[10.476s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/ament_index/resource_index/package_run_dependencies/omo_r1mini_navigation2
+[10.555s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/ament_index/resource_index/parent_prefix_path/omo_r1mini_navigation2
+[10.632s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/environment/ament_prefix_path.sh
+[10.713s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/environment/ament_prefix_path.dsv
+[10.793s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/environment/path.sh
+[10.871s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/environment/path.dsv
+[10.953s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/local_setup.bash
+[11.036s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/local_setup.sh
+[11.116s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/local_setup.zsh
+[11.203s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/local_setup.dsv
+[11.280s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/package.dsv
+[11.365s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/ament_index/resource_index/packages/omo_r1mini_navigation2
+[11.447s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/cmake/omo_r1mini_navigation2Config.cmake
+[11.525s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/cmake/omo_r1mini_navigation2Config-version.cmake
+[11.607s] -- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_navigation2/share/omo_r1mini_navigation2/package.xml
+[11.795s] Invoked command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy /usr/bin/cmake --install /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_navigation2

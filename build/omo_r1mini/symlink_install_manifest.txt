@@ -1,0 +1,15 @@
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/ament_index/resource_index/package_run_dependencies/omo_r1mini
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/ament_index/resource_index/parent_prefix_path/omo_r1mini
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/environment/ament_prefix_path.sh
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/environment/ament_prefix_path.dsv
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/environment/path.sh
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/environment/path.dsv
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/local_setup.bash
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/local_setup.sh
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/local_setup.zsh
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/local_setup.dsv
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/package.dsv
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/ament_index/resource_index/packages/omo_r1mini
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/cmake/omo_r1miniConfig.cmake
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/cmake/omo_r1miniConfig-version.cmake
+/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini/share/omo_r1mini/package.xml

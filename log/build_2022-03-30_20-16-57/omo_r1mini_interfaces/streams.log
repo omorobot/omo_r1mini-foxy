@@ -1,0 +1,72 @@
+[0.071s] Invoking command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy /usr/bin/cmake /home/r1mini/ros2_ws/src/omo_r1mini-foxy/omo_r1mini_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces
+[0.439s] -- The C compiler identification is GNU 9.4.0
+[0.767s] -- The CXX compiler identification is GNU 9.4.0
+[0.792s] -- Check for working C compiler: /usr/bin/cc
+[1.226s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.230s] -- Detecting C compiler ABI info
+[1.660s] -- Detecting C compiler ABI info - done
+[1.707s] -- Detecting C compile features
+[1.708s] -- Detecting C compile features - done
+[1.721s] -- Check for working CXX compiler: /usr/bin/c++
+[2.191s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.195s] -- Detecting CXX compiler ABI info
+[2.680s] -- Detecting CXX compiler ABI info - done
+[2.731s] -- Detecting CXX compile features
+[2.732s] -- Detecting CXX compile features - done
+[2.751s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[2.960s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.961s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.032s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[4.223s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[4.252s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.301s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[4.961s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[5.193s] -- Found FastRTPS: /opt/ros/foxy/include  
+[5.733s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.057s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[7.372s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[7.373s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[7.374s]   omo_r1mini_interfaces --arguments-file
+[7.375s]   /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter__arguments__omo_r1mini_interfaces.json
+[7.375s]   --output-dir
+[7.375s]   /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces
+[7.376s]   --output-file
+[7.376s]   /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces.idls)
+[7.376s]   returned error code 1:
+[7.377s] 
+[7.377s]   Error processing 'float64 SOC' of 'omo_r1mini_interfaces/Battery_Response':
+[7.377s]   ''SOC' is an invalid field name.  It should have the pattern
+[7.378s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[7.378s] 
+[7.379s]   Traceback (most recent call last):
+[7.379s] 
+[7.379s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[7.380s]       return _run_code(code, main_globals, None,
+[7.380s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[7.380s]       exec(code, run_globals)
+[7.381s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[7.381s]       sys.exit(main())
+[7.382s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[7.383s]       abs_idl_file = convert_to_idl(
+[7.383s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 24, in convert_to_idl
+[7.384s]       return convert_srv_to_idl(
+[7.384s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/srv/__init__.py", line 28, in convert_srv_to_idl
+[7.384s]       srv = parse_service_string(package_name, input_file.stem, content)
+[7.385s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 856, in parse_service_string
+[7.385s]       response_message = parse_message_string(
+[7.386s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 515, in parse_message_string
+[7.386s]       fields.append(Field(
+[7.387s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 353, in __init__
+[7.387s]       raise NameError(
+[7.387s] 
+[7.388s]   NameError: 'SOC' is an invalid field name.  It should have the pattern
+[7.388s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[7.389s] 
+[7.389s] Call Stack (most recent call first):
+[7.389s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[7.390s]   CMakeLists.txt:22 (rosidl_generate_interfaces)
+[7.390s] 
+[7.391s] 
+[7.391s] -- Configuring incomplete, errors occurred!
+[7.391s] See also "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/CMakeFiles/CMakeOutput.log".
+[7.469s] Invoked command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy /usr/bin/cmake /home/r1mini/ros2_ws/src/omo_r1mini-foxy/omo_r1mini_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces

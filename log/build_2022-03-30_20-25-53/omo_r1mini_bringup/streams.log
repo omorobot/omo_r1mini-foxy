@@ -1,0 +1,34 @@
+[5.932s] Invoking command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_bringup': AMENT_PREFIX_PATH=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces:/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces:/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_description:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/lib/python3.8/site-packages:/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup --editable --build-directory /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_bringup/build --no-deps install_data --install-dir /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup
+[7.734s] running develop
+[8.591s] running egg_info
+[8.595s] creating omo_r1mini_bringup.egg-info
+[8.598s] writing omo_r1mini_bringup.egg-info/PKG-INFO
+[8.599s] writing dependency_links to omo_r1mini_bringup.egg-info/dependency_links.txt
+[8.601s] writing entry points to omo_r1mini_bringup.egg-info/entry_points.txt
+[8.603s] writing requirements to omo_r1mini_bringup.egg-info/requires.txt
+[8.605s] writing top-level names to omo_r1mini_bringup.egg-info/top_level.txt
+[8.610s] writing manifest file 'omo_r1mini_bringup.egg-info/SOURCES.txt'
+[8.852s] reading manifest file 'omo_r1mini_bringup.egg-info/SOURCES.txt'
+[8.858s] writing manifest file 'omo_r1mini_bringup.egg-info/SOURCES.txt'
+[9.174s] running build_ext
+[9.177s] Creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/lib/python3.8/site-packages/site.py
+[9.192s] Creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/lib/python3.8/site-packages/omo-r1mini-bringup.egg-link (link to .)
+[9.200s] Installing omo_r1mini_mcu_node script to /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/lib/omo_r1mini_bringup
+[9.201s] Installing omo_r1mini_motor_setting_node script to /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/lib/omo_r1mini_bringup
+[9.203s] 
+[9.204s] Installed /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_bringup
+[9.205s] running install_data
+[9.206s] creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/ament_index
+[9.207s] creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/ament_index/resource_index
+[9.208s] creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/ament_index/resource_index/packages
+[9.209s] copying resource/omo_r1mini_bringup -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/ament_index/resource_index/packages
+[9.209s] copying package.xml -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup
+[9.209s] creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/launch
+[9.210s] copying launch/omo_r1mini_motor_setting.launch.py -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/launch
+[9.215s] copying launch/omo_r1mini_mcu.launch.py -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/launch
+[9.216s] copying launch/omo_r1mini_lidar.launch.py -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/launch
+[9.218s] copying launch/omo_r1mini_bringup.launch.py -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/launch
+[9.220s] creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/param
+[9.221s] copying param/omo_r1mini_lidar.yaml -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/param
+[9.222s] copying param/omo_r1mini_mcu.yaml -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/param
+[9.686s] Invoked command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_bringup' returned '0': AMENT_PREFIX_PATH=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces:/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces:/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_description:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/lib/python3.8/site-packages:/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup --editable --build-directory /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_bringup/build --no-deps install_data --install-dir /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup

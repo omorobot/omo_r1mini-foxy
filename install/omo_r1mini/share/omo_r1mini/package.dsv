@@ -1,0 +1,8 @@
+source;share/omo_r1mini/hook/cmake_prefix_path.ps1
+source;share/omo_r1mini/hook/cmake_prefix_path.dsv
+source;share/omo_r1mini/hook/cmake_prefix_path.sh
+source;share/omo_r1mini/local_setup.bash
+source;share/omo_r1mini/local_setup.dsv
+source;share/omo_r1mini/local_setup.ps1
+source;share/omo_r1mini/local_setup.sh
+source;share/omo_r1mini/local_setup.zsh

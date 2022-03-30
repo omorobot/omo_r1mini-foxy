@@ -1,0 +1,965 @@
+[0.000000] (-) TimerEvent: {}
+[0.002503] (-) JobUnselected: {'identifier': 'omo_r1mini'}
+[0.004073] (-) JobUnselected: {'identifier': 'omo_r1mini_bringup'}
+[0.005052] (-) JobUnselected: {'identifier': 'omo_r1mini_cartographer'}
+[0.007239] (-) JobUnselected: {'identifier': 'omo_r1mini_description'}
+[0.007562] (-) JobUnselected: {'identifier': 'omo_r1mini_gazebo'}
+[0.007700] (-) JobUnselected: {'identifier': 'omo_r1mini_navigation2'}
+[0.007879] (-) JobUnselected: {'identifier': 'omo_r1mini_teleop'}
+[0.008058] (omo_r1mini_interfaces) JobQueued: {'identifier': 'omo_r1mini_interfaces', 'dependencies': OrderedDict()}
+[0.011422] (omo_r1mini_interfaces) JobStarted: {'identifier': 'omo_r1mini_interfaces'}
+[0.079858] (omo_r1mini_interfaces) JobProgress: {'identifier': 'omo_r1mini_interfaces', 'progress': 'cmake'}
+[0.084058] (omo_r1mini_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/omo_r1mini_interfaces', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces'], 'cwd': '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'r1mini'), ('SSH_CLIENT', '192.168.0.234 45770 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/r1mini'), ('OLDPWD', '/home/r1mini/ros2_ws'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/r1mini/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'r1mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '16'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/r1mini/.local/bin:/home/r1mini/ros2_ws/install/ydlidar_sdk/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/r1mini/ros2_ws/install/ydlidar_ros2_driver:/home/r1mini/ros2_ws/install/omo_r1mini:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_navigation2:/home/r1mini/ros2_ws/install/omo_r1mini_gazebo:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/home/r1mini/ros2_ws/install/omo_r1mini_description:/home/r1mini/ros2_ws/install/omo_r1mini_cartographer:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('PWD', '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.0.234 45770 192.168.0.198 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/r1mini/ros2_ws/build/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_teleop/lib/python3.8/site-packages:/home/r1mini/ros2_ws/build/omo_r1mini_bringup:/home/r1mini/ros2_ws/install/omo_r1mini_bringup/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/r1mini/ros2_ws/install/ydlidar_sdk:/home/r1mini/ros2_ws/install/ydlidar_ros2_driver:/home/r1mini/ros2_ws/install/omo_r1mini:/home/r1mini/ros2_ws/install/omo_r1mini_navigation2:/home/r1mini/ros2_ws/install/omo_r1mini_gazebo:/home/r1mini/ros2_ws/install/omo_r1mini_description:/home/r1mini/ros2_ws/install/omo_r1mini_cartographer:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy')]), 'shell': False}
+[0.098064] (-) TimerEvent: {}
+[0.187629] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.198392] (-) TimerEvent: {}
+[0.300059] (-) TimerEvent: {}
+[0.379114] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.380781] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.400735] (-) TimerEvent: {}
+[0.502874] (-) TimerEvent: {}
+[0.604581] (-) TimerEvent: {}
+[0.706322] (-) TimerEvent: {}
+[0.808138] (-) TimerEvent: {}
+[0.909959] (-) TimerEvent: {}
+[1.011596] (-) TimerEvent: {}
+[1.113245] (-) TimerEvent: {}
+[1.214968] (-) TimerEvent: {}
+[1.316824] (-) TimerEvent: {}
+[1.418825] (-) TimerEvent: {}
+[1.503993] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.519072] (-) TimerEvent: {}
+[1.539232] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[1.555310] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.571160] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.619338] (-) TimerEvent: {}
+[1.721013] (-) TimerEvent: {}
+[1.822970] (-) TimerEvent: {}
+[1.924777] (-) TimerEvent: {}
+[2.026582] (-) TimerEvent: {}
+[2.128417] (-) TimerEvent: {}
+[2.230258] (-) TimerEvent: {}
+[2.332083] (-) TimerEvent: {}
+[2.434182] (-) TimerEvent: {}
+[2.517672] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.534403] (-) TimerEvent: {}
+[2.635869] (-) TimerEvent: {}
+[2.738149] (-) TimerEvent: {}
+[2.817251] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[2.838449] (-) TimerEvent: {}
+[2.940239] (-) TimerEvent: {}
+[3.042026] (-) TimerEvent: {}
+[3.143718] (-) TimerEvent: {}
+[3.245410] (-) TimerEvent: {}
+[3.347113] (-) TimerEvent: {}
+[3.448835] (-) TimerEvent: {}
+[3.551159] (-) TimerEvent: {}
+[3.652888] (-) TimerEvent: {}
+[3.754884] (-) TimerEvent: {}
+[3.856826] (-) TimerEvent: {}
+[3.955775] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[3.957363] (-) TimerEvent: {}
+[4.058740] (-) TimerEvent: {}
+[4.160854] (-) TimerEvent: {}
+[4.262755] (-) TimerEvent: {}
+[4.364781] (-) TimerEvent: {}
+[4.466582] (-) TimerEvent: {}
+[4.568418] (-) TimerEvent: {}
+[4.670290] (-) TimerEvent: {}
+[4.772057] (-) TimerEvent: {}
+[4.797547] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.865248] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.872208] (-) TimerEvent: {}
+[4.973702] (-) TimerEvent: {}
+[5.068221] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[5.073837] (-) TimerEvent: {}
+[5.087124] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[5.174301] (-) TimerEvent: {}
+[5.276279] (-) TimerEvent: {}
+[5.321060] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[5.323105] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.323917] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[5.324661] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[5.379800] (-) TimerEvent: {}
+[5.481796] (-) TimerEvent: {}
+[5.515121] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[5.582098] (-) TimerEvent: {}
+[5.683889] (-) TimerEvent: {}
+[5.785704] (-) TimerEvent: {}
+[5.852154] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[5.885946] (-) TimerEvent: {}
+[5.987566] (-) TimerEvent: {}
+[6.032663] (omo_r1mini_interfaces) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[6.043705] (omo_r1mini_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.050333] (omo_r1mini_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.085438] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.087693] (-) TimerEvent: {}
+[6.189105] (-) TimerEvent: {}
+[6.290867] (-) TimerEvent: {}
+[6.314173] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[6.331695] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces\n'}
+[6.391344] (-) TimerEvent: {}
+[6.425178] (omo_r1mini_interfaces) CommandEnded: {'returncode': 0}
+[6.430226] (omo_r1mini_interfaces) JobProgress: {'identifier': 'omo_r1mini_interfaces', 'progress': 'build'}
+[6.434694] (omo_r1mini_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'r1mini'), ('SSH_CLIENT', '192.168.0.234 45770 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/r1mini'), ('OLDPWD', '/home/r1mini/ros2_ws'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/r1mini/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'r1mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '16'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/r1mini/.local/bin:/home/r1mini/ros2_ws/install/ydlidar_sdk/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/r1mini/ros2_ws/install/ydlidar_ros2_driver:/home/r1mini/ros2_ws/install/omo_r1mini:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_navigation2:/home/r1mini/ros2_ws/install/omo_r1mini_gazebo:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/home/r1mini/ros2_ws/install/omo_r1mini_description:/home/r1mini/ros2_ws/install/omo_r1mini_cartographer:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('PWD', '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.0.234 45770 192.168.0.198 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/r1mini/ros2_ws/build/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_teleop/lib/python3.8/site-packages:/home/r1mini/ros2_ws/build/omo_r1mini_bringup:/home/r1mini/ros2_ws/install/omo_r1mini_bringup/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/r1mini/ros2_ws/install/ydlidar_sdk:/home/r1mini/ros2_ws/install/ydlidar_ros2_driver:/home/r1mini/ros2_ws/install/omo_r1mini:/home/r1mini/ros2_ws/install/omo_r1mini_navigation2:/home/r1mini/ros2_ws/install/omo_r1mini_gazebo:/home/r1mini/ros2_ws/install/omo_r1mini_description:/home/r1mini/ros2_ws/install/omo_r1mini_cartographer:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy')]), 'shell': False}
+[6.491828] (-) TimerEvent: {}
+[6.593988] (-) TimerEvent: {}
+[6.695979] (-) TimerEvent: {}
+[6.715283] (omo_r1mini_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[6.718918] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__cpp\x1b[0m\n'}
+[6.787980] (omo_r1mini_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[6.796370] (-) TimerEvent: {}
+[6.898679] (-) TimerEvent: {}
+[7.000364] (-) TimerEvent: {}
+[7.102429] (-) TimerEvent: {}
+[7.204103] (-) TimerEvent: {}
+[7.307011] (-) TimerEvent: {}
+[7.408680] (-) TimerEvent: {}
+[7.510905] (-) TimerEvent: {}
+[7.613005] (-) TimerEvent: {}
+[7.715205] (-) TimerEvent: {}
+[7.817254] (-) TimerEvent: {}
+[7.919324] (-) TimerEvent: {}
+[8.021135] (-) TimerEvent: {}
+[8.122794] (-) TimerEvent: {}
+[8.224441] (-) TimerEvent: {}
+[8.326329] (-) TimerEvent: {}
+[8.427901] (-) TimerEvent: {}
+[8.529544] (-) TimerEvent: {}
+[8.631241] (-) TimerEvent: {}
+[8.733623] (-) TimerEvent: {}
+[8.835747] (-) TimerEvent: {}
+[8.937622] (-) TimerEvent: {}
+[9.039148] (-) TimerEvent: {}
+[9.140887] (-) TimerEvent: {}
+[9.242695] (-) TimerEvent: {}
+[9.344334] (-) TimerEvent: {}
+[9.446564] (-) TimerEvent: {}
+[9.548556] (-) TimerEvent: {}
+[9.650414] (-) TimerEvent: {}
+[9.752373] (-) TimerEvent: {}
+[9.855511] (-) TimerEvent: {}
+[9.957253] (-) TimerEvent: {}
+[10.059403] (-) TimerEvent: {}
+[10.162063] (-) TimerEvent: {}
+[10.264316] (-) TimerEvent: {}
+[10.366531] (-) TimerEvent: {}
+[10.468662] (-) TimerEvent: {}
+[10.570763] (-) TimerEvent: {}
+[10.672755] (-) TimerEvent: {}
+[10.774813] (-) TimerEvent: {}
+[10.840738] (omo_r1mini_interfaces) StdoutLine: {'line': b'[  2%] Built target omo_r1mini_interfaces__cpp\n'}
+[10.875288] (-) TimerEvent: {}
+[10.919018] (omo_r1mini_interfaces) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[10.952563] (omo_r1mini_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[10.975767] (-) TimerEvent: {}
+[11.077883] (-) TimerEvent: {}
+[11.179879] (-) TimerEvent: {}
+[11.222766] (omo_r1mini_interfaces) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[11.266387] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__rosidl_generator_c\x1b[0m\n'}
+[11.280295] (-) TimerEvent: {}
+[11.382281] (-) TimerEvent: {}
+[11.422407] (omo_r1mini_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_generator_c.dir/rosidl_generator_c/omo_r1mini_interfaces/srv/detail/battery__functions.c.o\x1b[0m\n'}
+[11.482687] (-) TimerEvent: {}
+[11.584712] (-) TimerEvent: {}
+[11.686513] (-) TimerEvent: {}
+[11.788430] (-) TimerEvent: {}
+[11.890370] (-) TimerEvent: {}
+[11.925228] (omo_r1mini_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_generator_c.dir/rosidl_generator_c/omo_r1mini_interfaces/srv/detail/calg__functions.c.o\x1b[0m\n'}
+[11.990762] (-) TimerEvent: {}
+[12.092541] (-) TimerEvent: {}
+[12.194583] (-) TimerEvent: {}
+[12.296533] (-) TimerEvent: {}
+[12.338322] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_generator_c.dir/rosidl_generator_c/omo_r1mini_interfaces/srv/detail/color__functions.c.o\x1b[0m\n'}
+[12.397293] (-) TimerEvent: {}
+[12.499185] (-) TimerEvent: {}
+[12.601138] (-) TimerEvent: {}
+[12.703250] (-) TimerEvent: {}
+[12.706971] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_generator_c.dir/rosidl_generator_c/omo_r1mini_interfaces/srv/detail/onoff__functions.c.o\x1b[0m\n'}
+[12.803610] (-) TimerEvent: {}
+[12.905604] (-) TimerEvent: {}
+[13.007512] (-) TimerEvent: {}
+[13.048922] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_generator_c.dir/rosidl_generator_c/omo_r1mini_interfaces/srv/detail/reset_odom__functions.c.o\x1b[0m\n'}
+[13.107909] (-) TimerEvent: {}
+[13.209723] (-) TimerEvent: {}
+[13.311502] (-) TimerEvent: {}
+[13.413191] (-) TimerEvent: {}
+[13.424207] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_generator_c.dir/rosidl_generator_c/omo_r1mini_interfaces/srv/detail/save_color__functions.c.o\x1b[0m\n'}
+[13.513660] (-) TimerEvent: {}
+[13.615389] (-) TimerEvent: {}
+[13.717090] (-) TimerEvent: {}
+[13.816560] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32m\x1b[1mLinking C shared library libomo_r1mini_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[13.818437] (-) TimerEvent: {}
+[13.919811] (-) TimerEvent: {}
+[14.022188] (-) TimerEvent: {}
+[14.124183] (-) TimerEvent: {}
+[14.212006] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 16%] Built target omo_r1mini_interfaces__rosidl_generator_c\n'}
+[14.224606] (-) TimerEvent: {}
+[14.310781] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[14.325038] (-) TimerEvent: {}
+[14.426907] (-) TimerEvent: {}
+[14.490105] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[14.527289] (-) TimerEvent: {}
+[14.628905] (-) TimerEvent: {}
+[14.669559] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/omo_r1mini_interfaces/srv/battery__type_support.cpp.o\x1b[0m\n'}
+[14.729375] (-) TimerEvent: {}
+[14.831163] (-) TimerEvent: {}
+[14.932966] (-) TimerEvent: {}
+[15.034952] (-) TimerEvent: {}
+[15.136711] (-) TimerEvent: {}
+[15.238668] (-) TimerEvent: {}
+[15.340729] (-) TimerEvent: {}
+[15.443007] (-) TimerEvent: {}
+[15.544952] (-) TimerEvent: {}
+[15.647028] (-) TimerEvent: {}
+[15.749384] (-) TimerEvent: {}
+[15.851486] (-) TimerEvent: {}
+[15.953632] (-) TimerEvent: {}
+[15.972833] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[16.054101] (-) TimerEvent: {}
+[16.104904] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/omo_r1mini_interfaces/srv/detail/battery__type_support.cpp.o\x1b[0m\n'}
+[16.154497] (-) TimerEvent: {}
+[16.256668] (-) TimerEvent: {}
+[16.358962] (-) TimerEvent: {}
+[16.450137] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[16.459339] (-) TimerEvent: {}
+[16.561286] (-) TimerEvent: {}
+[16.663219] (-) TimerEvent: {}
+[16.765216] (-) TimerEvent: {}
+[16.816613] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/battery__type_support.cpp.o\x1b[0m\n'}
+[16.865755] (-) TimerEvent: {}
+[16.967688] (-) TimerEvent: {}
+[17.069758] (-) TimerEvent: {}
+[17.171793] (-) TimerEvent: {}
+[17.274274] (-) TimerEvent: {}
+[17.376343] (-) TimerEvent: {}
+[17.478425] (-) TimerEvent: {}
+[17.580411] (-) TimerEvent: {}
+[17.682540] (-) TimerEvent: {}
+[17.784515] (-) TimerEvent: {}
+[17.886679] (-) TimerEvent: {}
+[17.921672] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/omo_r1mini_interfaces/srv/calg__type_support.cpp.o\x1b[0m\n'}
+[17.987179] (-) TimerEvent: {}
+[18.089659] (-) TimerEvent: {}
+[18.191583] (-) TimerEvent: {}
+[18.293799] (-) TimerEvent: {}
+[18.395947] (-) TimerEvent: {}
+[18.498314] (-) TimerEvent: {}
+[18.600544] (-) TimerEvent: {}
+[18.702961] (-) TimerEvent: {}
+[18.731938] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/omo_r1mini_interfaces/srv/detail/calg__type_support.cpp.o\x1b[0m\n'}
+[18.803464] (-) TimerEvent: {}
+[18.906313] (-) TimerEvent: {}
+[19.008450] (-) TimerEvent: {}
+[19.110589] (-) TimerEvent: {}
+[19.212698] (-) TimerEvent: {}
+[19.314939] (-) TimerEvent: {}
+[19.417082] (-) TimerEvent: {}
+[19.517227] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[19.519211] (-) TimerEvent: {}
+[19.620792] (-) TimerEvent: {}
+[19.723109] (-) TimerEvent: {}
+[19.726331] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/omo_r1mini_interfaces/srv/detail/battery__type_support.c.o\x1b[0m\n'}
+[19.823621] (-) TimerEvent: {}
+[19.925833] (-) TimerEvent: {}
+[20.027936] (-) TimerEvent: {}
+[20.075303] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/omo_r1mini_interfaces/srv/detail/calg__type_support.c.o\x1b[0m\n'}
+[20.128634] (-) TimerEvent: {}
+[20.231113] (-) TimerEvent: {}
+[20.333298] (-) TimerEvent: {}
+[20.435740] (-) TimerEvent: {}
+[20.464944] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/omo_r1mini_interfaces/srv/detail/color__type_support.c.o\x1b[0m\n'}
+[20.536282] (-) TimerEvent: {}
+[20.638460] (-) TimerEvent: {}
+[20.740910] (-) TimerEvent: {}
+[20.832537] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/omo_r1mini_interfaces/srv/color__type_support.cpp.o\x1b[0m\n'}
+[20.841364] (-) TimerEvent: {}
+[20.856365] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/omo_r1mini_interfaces/srv/detail/onoff__type_support.c.o\x1b[0m\n'}
+[20.941916] (-) TimerEvent: {}
+[21.044128] (-) TimerEvent: {}
+[21.146569] (-) TimerEvent: {}
+[21.196123] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/omo_r1mini_interfaces/srv/detail/reset_odom__type_support.c.o\x1b[0m\n'}
+[21.247098] (-) TimerEvent: {}
+[21.349415] (-) TimerEvent: {}
+[21.389671] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/calg__type_support.cpp.o\x1b[0m\n'}
+[21.450038] (-) TimerEvent: {}
+[21.514676] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/omo_r1mini_interfaces/srv/detail/save_color__type_support.c.o\x1b[0m\n'}
+[21.544396] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/omo_r1mini_interfaces/srv/detail/color__type_support.cpp.o\x1b[0m\n'}
+[21.550444] (-) TimerEvent: {}
+[21.652545] (-) TimerEvent: {}
+[21.754775] (-) TimerEvent: {}
+[21.828337] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 39%] \x1b[32m\x1b[1mLinking C shared library libomo_r1mini_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[21.855316] (-) TimerEvent: {}
+[21.957423] (-) TimerEvent: {}
+[22.059582] (-) TimerEvent: {}
+[22.113841] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 39%] Built target omo_r1mini_interfaces__rosidl_typesupport_introspection_c\n'}
+[22.160113] (-) TimerEvent: {}
+[22.205435] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[22.266916] (-) TimerEvent: {}
+[22.369002] (-) TimerEvent: {}
+[22.471082] (-) TimerEvent: {}
+[22.573170] (-) TimerEvent: {}
+[22.675405] (-) TimerEvent: {}
+[22.777706] (-) TimerEvent: {}
+[22.879823] (-) TimerEvent: {}
+[22.981959] (-) TimerEvent: {}
+[23.084080] (-) TimerEvent: {}
+[23.186171] (-) TimerEvent: {}
+[23.288374] (-) TimerEvent: {}
+[23.390643] (-) TimerEvent: {}
+[23.492755] (-) TimerEvent: {}
+[23.594964] (-) TimerEvent: {}
+[23.697156] (-) TimerEvent: {}
+[23.799384] (-) TimerEvent: {}
+[23.843357] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/omo_r1mini_interfaces/srv/onoff__type_support.cpp.o\x1b[0m\n'}
+[23.899853] (-) TimerEvent: {}
+[24.001956] (-) TimerEvent: {}
+[24.104169] (-) TimerEvent: {}
+[24.206595] (-) TimerEvent: {}
+[24.228979] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/omo_r1mini_interfaces/srv/detail/onoff__type_support.cpp.o\x1b[0m\n'}
+[24.307050] (-) TimerEvent: {}
+[24.409332] (-) TimerEvent: {}
+[24.511970] (-) TimerEvent: {}
+[24.613971] (-) TimerEvent: {}
+[24.716139] (-) TimerEvent: {}
+[24.818224] (-) TimerEvent: {}
+[24.920259] (-) TimerEvent: {}
+[25.022298] (-) TimerEvent: {}
+[25.124453] (-) TimerEvent: {}
+[25.226702] (-) TimerEvent: {}
+[25.329310] (-) TimerEvent: {}
+[25.431341] (-) TimerEvent: {}
+[25.459825] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/color__type_support.cpp.o\x1b[0m\n'}
+[25.531801] (-) TimerEvent: {}
+[25.633859] (-) TimerEvent: {}
+[25.736064] (-) TimerEvent: {}
+[25.838406] (-) TimerEvent: {}
+[25.940589] (-) TimerEvent: {}
+[26.042960] (-) TimerEvent: {}
+[26.145176] (-) TimerEvent: {}
+[26.247499] (-) TimerEvent: {}
+[26.349784] (-) TimerEvent: {}
+[26.400523] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[26.450227] (-) TimerEvent: {}
+[26.552118] (-) TimerEvent: {}
+[26.592478] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/omo_r1mini_interfaces/srv/battery__type_support.cpp.o\x1b[0m\n'}
+[26.652650] (-) TimerEvent: {}
+[26.725201] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/omo_r1mini_interfaces/srv/reset_odom__type_support.cpp.o\x1b[0m\n'}
+[26.753228] (-) TimerEvent: {}
+[26.855548] (-) TimerEvent: {}
+[26.896255] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/omo_r1mini_interfaces/srv/calg__type_support.cpp.o\x1b[0m\n'}
+[26.956114] (-) TimerEvent: {}
+[27.058419] (-) TimerEvent: {}
+[27.060981] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/omo_r1mini_interfaces/srv/detail/reset_odom__type_support.cpp.o\x1b[0m\n'}
+[27.158844] (-) TimerEvent: {}
+[27.212070] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/omo_r1mini_interfaces/srv/color__type_support.cpp.o\x1b[0m\n'}
+[27.259347] (-) TimerEvent: {}
+[27.361595] (-) TimerEvent: {}
+[27.463676] (-) TimerEvent: {}
+[27.497414] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/omo_r1mini_interfaces/srv/onoff__type_support.cpp.o\x1b[0m\n'}
+[27.564203] (-) TimerEvent: {}
+[27.666560] (-) TimerEvent: {}
+[27.773372] (-) TimerEvent: {}
+[27.804907] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/omo_r1mini_interfaces/srv/reset_odom__type_support.cpp.o\x1b[0m\n'}
+[27.873935] (-) TimerEvent: {}
+[27.976024] (-) TimerEvent: {}
+[28.078129] (-) TimerEvent: {}
+[28.115784] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/omo_r1mini_interfaces/srv/save_color__type_support.cpp.o\x1b[0m\n'}
+[28.178629] (-) TimerEvent: {}
+[28.280835] (-) TimerEvent: {}
+[28.383146] (-) TimerEvent: {}
+[28.431969] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX shared library libomo_r1mini_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[28.483643] (-) TimerEvent: {}
+[28.586066] (-) TimerEvent: {}
+[28.688571] (-) TimerEvent: {}
+[28.790731] (-) TimerEvent: {}
+[28.832028] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 57%] Built target omo_r1mini_interfaces__rosidl_typesupport_c\n'}
+[28.892907] (-) TimerEvent: {}
+[28.956542] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/omo_r1mini_interfaces/srv/detail/save_color__type_support.cpp.o\x1b[0m\n'}
+[28.993535] (-) TimerEvent: {}
+[29.095687] (-) TimerEvent: {}
+[29.197957] (-) TimerEvent: {}
+[29.300071] (-) TimerEvent: {}
+[29.402255] (-) TimerEvent: {}
+[29.504484] (-) TimerEvent: {}
+[29.545447] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/omo_r1mini_interfaces/srv/save_color__type_support.cpp.o\x1b[0m\n'}
+[29.605073] (-) TimerEvent: {}
+[29.707919] (-) TimerEvent: {}
+[29.715573] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/onoff__type_support.cpp.o\x1b[0m\n'}
+[29.808330] (-) TimerEvent: {}
+[29.845017] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/reset_odom__type_support.cpp.o\x1b[0m\n'}
+[29.908836] (-) TimerEvent: {}
+[30.011063] (-) TimerEvent: {}
+[30.113165] (-) TimerEvent: {}
+[30.215567] (-) TimerEvent: {}
+[30.318010] (-) TimerEvent: {}
+[30.420180] (-) TimerEvent: {}
+[30.522465] (-) TimerEvent: {}
+[30.624650] (-) TimerEvent: {}
+[30.726918] (-) TimerEvent: {}
+[30.829159] (-) TimerEvent: {}
+[30.931409] (-) TimerEvent: {}
+[31.033735] (-) TimerEvent: {}
+[31.135976] (-) TimerEvent: {}
+[31.238153] (-) TimerEvent: {}
+[31.340367] (-) TimerEvent: {}
+[31.442653] (-) TimerEvent: {}
+[31.545159] (-) TimerEvent: {}
+[31.647816] (-) TimerEvent: {}
+[31.677105] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libomo_r1mini_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[31.748304] (-) TimerEvent: {}
+[31.850506] (-) TimerEvent: {}
+[31.952592] (-) TimerEvent: {}
+[32.054774] (-) TimerEvent: {}
+[32.072468] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 64%] Built target omo_r1mini_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[32.155395] (-) TimerEvent: {}
+[32.218455] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/save_color__type_support.cpp.o\x1b[0m\n'}
+[32.255869] (-) TimerEvent: {}
+[32.277258] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library libomo_r1mini_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[32.356382] (-) TimerEvent: {}
+[32.458631] (-) TimerEvent: {}
+[32.560934] (-) TimerEvent: {}
+[32.648896] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 67%] Built target omo_r1mini_interfaces__rosidl_typesupport_cpp\n'}
+[32.661429] (-) TimerEvent: {}
+[32.763626] (-) TimerEvent: {}
+[32.865782] (-) TimerEvent: {}
+[32.967866] (-) TimerEvent: {}
+[33.070069] (-) TimerEvent: {}
+[33.172220] (-) TimerEvent: {}
+[33.274418] (-) TimerEvent: {}
+[33.376608] (-) TimerEvent: {}
+[33.478873] (-) TimerEvent: {}
+[33.585976] (-) TimerEvent: {}
+[33.688119] (-) TimerEvent: {}
+[33.790240] (-) TimerEvent: {}
+[33.892362] (-) TimerEvent: {}
+[33.994412] (-) TimerEvent: {}
+[34.096409] (-) TimerEvent: {}
+[34.198413] (-) TimerEvent: {}
+[34.300364] (-) TimerEvent: {}
+[34.402379] (-) TimerEvent: {}
+[34.504340] (-) TimerEvent: {}
+[34.606339] (-) TimerEvent: {}
+[34.708304] (-) TimerEvent: {}
+[34.810308] (-) TimerEvent: {}
+[34.912294] (-) TimerEvent: {}
+[35.014337] (-) TimerEvent: {}
+[35.116368] (-) TimerEvent: {}
+[35.218383] (-) TimerEvent: {}
+[35.320316] (-) TimerEvent: {}
+[35.364653] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libomo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[35.421528] (-) TimerEvent: {}
+[35.523572] (-) TimerEvent: {}
+[35.627049] (-) TimerEvent: {}
+[35.729616] (-) TimerEvent: {}
+[35.831624] (-) TimerEvent: {}
+[35.933582] (-) TimerEvent: {}
+[36.035564] (-) TimerEvent: {}
+[36.105581] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 69%] Built target omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[36.135982] (-) TimerEvent: {}
+[36.168515] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[36.236479] (-) TimerEvent: {}
+[36.338247] (-) TimerEvent: {}
+[36.440566] (-) TimerEvent: {}
+[36.542357] (-) TimerEvent: {}
+[36.644061] (-) TimerEvent: {}
+[36.745852] (-) TimerEvent: {}
+[36.847596] (-) TimerEvent: {}
+[36.949311] (-) TimerEvent: {}
+[37.051075] (-) TimerEvent: {}
+[37.152739] (-) TimerEvent: {}
+[37.254357] (-) TimerEvent: {}
+[37.355888] (-) TimerEvent: {}
+[37.457554] (-) TimerEvent: {}
+[37.559136] (-) TimerEvent: {}
+[37.660735] (-) TimerEvent: {}
+[37.762526] (-) TimerEvent: {}
+[37.864157] (-) TimerEvent: {}
+[37.965749] (-) TimerEvent: {}
+[38.067344] (-) TimerEvent: {}
+[38.168954] (-) TimerEvent: {}
+[38.270557] (-) TimerEvent: {}
+[38.372132] (-) TimerEvent: {}
+[38.473731] (-) TimerEvent: {}
+[38.575314] (-) TimerEvent: {}
+[38.676917] (-) TimerEvent: {}
+[38.778564] (-) TimerEvent: {}
+[38.880412] (-) TimerEvent: {}
+[38.982380] (-) TimerEvent: {}
+[39.084375] (-) TimerEvent: {}
+[39.186436] (-) TimerEvent: {}
+[39.288427] (-) TimerEvent: {}
+[39.321519] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[39.388834] (-) TimerEvent: {}
+[39.461421] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/omo_r1mini_interfaces/srv/detail/calg__type_support_c.cpp.o\x1b[0m\n'}
+[39.463801] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/omo_r1mini_interfaces/srv/detail/battery__type_support_c.cpp.o\x1b[0m\n'}
+[39.467941] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/omo_r1mini_interfaces/srv/detail/color__type_support_c.cpp.o\x1b[0m\n'}
+[39.474529] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/omo_r1mini_interfaces/srv/detail/onoff__type_support_c.cpp.o\x1b[0m\n'}
+[39.489655] (-) TimerEvent: {}
+[39.591761] (-) TimerEvent: {}
+[39.693918] (-) TimerEvent: {}
+[39.795930] (-) TimerEvent: {}
+[39.898007] (-) TimerEvent: {}
+[40.000141] (-) TimerEvent: {}
+[40.102419] (-) TimerEvent: {}
+[40.204655] (-) TimerEvent: {}
+[40.306876] (-) TimerEvent: {}
+[40.409064] (-) TimerEvent: {}
+[40.511400] (-) TimerEvent: {}
+[40.613763] (-) TimerEvent: {}
+[40.715926] (-) TimerEvent: {}
+[40.818161] (-) TimerEvent: {}
+[40.920426] (-) TimerEvent: {}
+[41.022624] (-) TimerEvent: {}
+[41.124758] (-) TimerEvent: {}
+[41.227081] (-) TimerEvent: {}
+[41.329378] (-) TimerEvent: {}
+[41.431643] (-) TimerEvent: {}
+[41.533948] (-) TimerEvent: {}
+[41.636102] (-) TimerEvent: {}
+[41.738238] (-) TimerEvent: {}
+[41.840331] (-) TimerEvent: {}
+[41.942582] (-) TimerEvent: {}
+[42.044774] (-) TimerEvent: {}
+[42.147038] (-) TimerEvent: {}
+[42.249266] (-) TimerEvent: {}
+[42.351527] (-) TimerEvent: {}
+[42.453950] (-) TimerEvent: {}
+[42.546860] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/omo_r1mini_interfaces/srv/detail/reset_odom__type_support_c.cpp.o\x1b[0m\n'}
+[42.554699] (-) TimerEvent: {}
+[42.657137] (-) TimerEvent: {}
+[42.689102] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/omo_r1mini_interfaces/srv/detail/save_color__type_support_c.cpp.o\x1b[0m\n'}
+[42.757720] (-) TimerEvent: {}
+[42.860085] (-) TimerEvent: {}
+[42.962094] (-) TimerEvent: {}
+[43.064051] (-) TimerEvent: {}
+[43.166171] (-) TimerEvent: {}
+[43.268221] (-) TimerEvent: {}
+[43.370494] (-) TimerEvent: {}
+[43.472542] (-) TimerEvent: {}
+[43.574739] (-) TimerEvent: {}
+[43.676988] (-) TimerEvent: {}
+[43.779124] (-) TimerEvent: {}
+[43.881237] (-) TimerEvent: {}
+[43.983272] (-) TimerEvent: {}
+[44.085313] (-) TimerEvent: {}
+[44.187378] (-) TimerEvent: {}
+[44.289427] (-) TimerEvent: {}
+[44.391489] (-) TimerEvent: {}
+[44.493571] (-) TimerEvent: {}
+[44.595683] (-) TimerEvent: {}
+[44.697881] (-) TimerEvent: {}
+[44.799892] (-) TimerEvent: {}
+[44.901964] (-) TimerEvent: {}
+[45.004166] (-) TimerEvent: {}
+[45.106543] (-) TimerEvent: {}
+[45.208423] (-) TimerEvent: {}
+[45.249073] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX shared library libomo_r1mini_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[45.308829] (-) TimerEvent: {}
+[45.411101] (-) TimerEvent: {}
+[45.513609] (-) TimerEvent: {}
+[45.616005] (-) TimerEvent: {}
+[45.717977] (-) TimerEvent: {}
+[45.819936] (-) TimerEvent: {}
+[45.921926] (-) TimerEvent: {}
+[45.968145] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 80%] Built target omo_r1mini_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[46.022330] (-) TimerEvent: {}
+[46.028931] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces\x1b[0m\n'}
+[46.100846] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 80%] Built target omo_r1mini_interfaces\n'}
+[46.122788] (-) TimerEvent: {}
+[46.162200] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__py\x1b[0m\n'}
+[46.223191] (-) TimerEvent: {}
+[46.225865] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[46.323537] (-) TimerEvent: {}
+[46.425282] (-) TimerEvent: {}
+[46.527340] (-) TimerEvent: {}
+[46.629115] (-) TimerEvent: {}
+[46.731084] (-) TimerEvent: {}
+[46.832741] (-) TimerEvent: {}
+[46.934578] (-) TimerEvent: {}
+[47.036287] (-) TimerEvent: {}
+[47.138283] (-) TimerEvent: {}
+[47.239938] (-) TimerEvent: {}
+[47.341688] (-) TimerEvent: {}
+[47.443612] (-) TimerEvent: {}
+[47.545364] (-) TimerEvent: {}
+[47.647121] (-) TimerEvent: {}
+[47.748854] (-) TimerEvent: {}
+[47.850739] (-) TimerEvent: {}
+[47.952483] (-) TimerEvent: {}
+[48.054210] (-) TimerEvent: {}
+[48.155846] (-) TimerEvent: {}
+[48.257417] (-) TimerEvent: {}
+[48.359057] (-) TimerEvent: {}
+[48.460633] (-) TimerEvent: {}
+[48.562825] (-) TimerEvent: {}
+[48.664486] (-) TimerEvent: {}
+[48.766319] (-) TimerEvent: {}
+[48.868003] (-) TimerEvent: {}
+[48.969825] (-) TimerEvent: {}
+[49.071497] (-) TimerEvent: {}
+[49.173140] (-) TimerEvent: {}
+[49.274931] (-) TimerEvent: {}
+[49.376599] (-) TimerEvent: {}
+[49.478838] (-) TimerEvent: {}
+[49.580413] (-) TimerEvent: {}
+[49.682023] (-) TimerEvent: {}
+[49.783605] (-) TimerEvent: {}
+[49.886728] (-) TimerEvent: {}
+[49.988380] (-) TimerEvent: {}
+[50.090006] (-) TimerEvent: {}
+[50.191631] (-) TimerEvent: {}
+[50.293257] (-) TimerEvent: {}
+[50.394924] (-) TimerEvent: {}
+[50.496588] (-) TimerEvent: {}
+[50.598298] (-) TimerEvent: {}
+[50.699908] (-) TimerEvent: {}
+[50.801543] (-) TimerEvent: {}
+[50.903341] (-) TimerEvent: {}
+[51.005452] (-) TimerEvent: {}
+[51.107321] (-) TimerEvent: {}
+[51.208956] (-) TimerEvent: {}
+[51.310757] (-) TimerEvent: {}
+[51.412452] (-) TimerEvent: {}
+[51.514067] (-) TimerEvent: {}
+[51.615645] (-) TimerEvent: {}
+[51.717221] (-) TimerEvent: {}
+[51.819032] (-) TimerEvent: {}
+[51.920576] (-) TimerEvent: {}
+[52.022202] (-) TimerEvent: {}
+[52.123950] (-) TimerEvent: {}
+[52.225590] (-) TimerEvent: {}
+[52.327125] (-) TimerEvent: {}
+[52.428881] (-) TimerEvent: {}
+[52.530905] (-) TimerEvent: {}
+[52.632862] (-) TimerEvent: {}
+[52.734993] (-) TimerEvent: {}
+[52.837095] (-) TimerEvent: {}
+[52.939201] (-) TimerEvent: {}
+[53.031549] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 81%] Built target omo_r1mini_interfaces__py\n'}
+[53.039578] (-) TimerEvent: {}
+[53.096423] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__python\x1b[0m\n'}
+[53.139936] (-) TimerEvent: {}
+[53.242308] (-) TimerEvent: {}
+[53.336998] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__python.dir/rosidl_generator_py/omo_r1mini_interfaces/srv/_color_s.c.o\x1b[0m\n'}
+[53.340495] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__python.dir/rosidl_generator_py/omo_r1mini_interfaces/srv/_onoff_s.c.o\x1b[0m\n'}
+[53.343127] (-) TimerEvent: {}
+[53.346012] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__python.dir/rosidl_generator_py/omo_r1mini_interfaces/srv/_battery_s.c.o\x1b[0m\n'}
+[53.358325] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__python.dir/rosidl_generator_py/omo_r1mini_interfaces/srv/_calg_s.c.o\x1b[0m\n'}
+[53.443664] (-) TimerEvent: {}
+[53.545822] (-) TimerEvent: {}
+[53.647917] (-) TimerEvent: {}
+[53.750029] (-) TimerEvent: {}
+[53.852171] (-) TimerEvent: {}
+[53.954567] (-) TimerEvent: {}
+[54.057031] (-) TimerEvent: {}
+[54.113967] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__python.dir/rosidl_generator_py/omo_r1mini_interfaces/srv/_reset_odom_s.c.o\x1b[0m\n'}
+[54.145962] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__python.dir/rosidl_generator_py/omo_r1mini_interfaces/srv/_save_color_s.c.o\x1b[0m\n'}
+[54.157426] (-) TimerEvent: {}
+[54.259567] (-) TimerEvent: {}
+[54.361628] (-) TimerEvent: {}
+[54.463510] (-) TimerEvent: {}
+[54.566018] (-) TimerEvent: {}
+[54.668558] (-) TimerEvent: {}
+[54.768221] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/omo_r1mini_interfaces/libomo_r1mini_interfaces__python.so\x1b[0m\n'}
+[54.770276] (-) TimerEvent: {}
+[54.871935] (-) TimerEvent: {}
+[54.973908] (-) TimerEvent: {}
+[55.058059] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 91%] Built target omo_r1mini_interfaces__python\n'}
+[55.074337] (-) TimerEvent: {}
+[55.135158] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[55.136869] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[55.140044] (omo_r1mini_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target omo_r1mini_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[55.174796] (-) TimerEvent: {}
+[55.258442] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/omo_r1mini_interfaces/_omo_r1mini_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[55.275253] (-) TimerEvent: {}
+[55.295545] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/omo_r1mini_interfaces/_omo_r1mini_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[55.309833] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/omo_r1mini_interfaces/_omo_r1mini_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[55.375733] (-) TimerEvent: {}
+[55.477809] (-) TimerEvent: {}
+[55.580143] (-) TimerEvent: {}
+[55.682212] (-) TimerEvent: {}
+[55.784315] (-) TimerEvent: {}
+[55.886561] (-) TimerEvent: {}
+[55.988773] (-) TimerEvent: {}
+[56.091105] (-) TimerEvent: {}
+[56.128383] (omo_r1mini_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/omo_r1mini_interfaces/omo_r1mini_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[56.168082] (omo_r1mini_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/omo_r1mini_interfaces/omo_r1mini_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[56.171091] (omo_r1mini_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/omo_r1mini_interfaces/omo_r1mini_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[56.191567] (-) TimerEvent: {}
+[56.293877] (-) TimerEvent: {}
+[56.396698] (-) TimerEvent: {}
+[56.462191] (omo_r1mini_interfaces) StdoutLine: {'line': b'[100%] Built target omo_r1mini_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[56.494455] (omo_r1mini_interfaces) StdoutLine: {'line': b'[100%] Built target omo_r1mini_interfaces__rosidl_typesupport_c__pyext\n'}
+[56.496964] (-) TimerEvent: {}
+[56.599113] (-) TimerEvent: {}
+[56.684398] (omo_r1mini_interfaces) StdoutLine: {'line': b'[100%] Built target omo_r1mini_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[56.699540] (-) TimerEvent: {}
+[56.762830] (omo_r1mini_interfaces) CommandEnded: {'returncode': 0}
+[56.800027] (-) TimerEvent: {}
+[56.902022] (-) TimerEvent: {}
+[57.003615] (-) TimerEvent: {}
+[57.105781] (-) TimerEvent: {}
+[57.207394] (-) TimerEvent: {}
+[57.309711] (omo_r1mini_interfaces) JobProgress: {'identifier': 'omo_r1mini_interfaces', 'progress': 'install'}
+[57.310363] (-) TimerEvent: {}
+[57.383539] (omo_r1mini_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces'], 'cwd': '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'r1mini'), ('SSH_CLIENT', '192.168.0.234 45770 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/aarch64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/r1mini'), ('OLDPWD', '/home/r1mini/ros2_ws'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/r1mini/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'r1mini'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '16'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/r1mini/.local/bin:/home/r1mini/ros2_ws/install/ydlidar_sdk/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/r1mini/ros2_ws/install/ydlidar_ros2_driver:/home/r1mini/ros2_ws/install/omo_r1mini:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_navigation2:/home/r1mini/ros2_ws/install/omo_r1mini_gazebo:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/home/r1mini/ros2_ws/install/omo_r1mini_description:/home/r1mini/ros2_ws/install/omo_r1mini_cartographer:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('PWD', '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.0.234 45770 192.168.0.198 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/r1mini/ros2_ws/build/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_teleop/lib/python3.8/site-packages:/home/r1mini/ros2_ws/build/omo_r1mini_bringup:/home/r1mini/ros2_ws/install/omo_r1mini_bringup/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/r1mini/ros2_ws/install/ydlidar_sdk:/home/r1mini/ros2_ws/install/ydlidar_ros2_driver:/home/r1mini/ros2_ws/install/omo_r1mini:/home/r1mini/ros2_ws/install/omo_r1mini_navigation2:/home/r1mini/ros2_ws/install/omo_r1mini_gazebo:/home/r1mini/ros2_ws/install/omo_r1mini_description:/home/r1mini/ros2_ws/install/omo_r1mini_cartographer:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy')]), 'shell': False}
+[57.411288] (-) TimerEvent: {}
+[57.454020] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[57.456865] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[57.459046] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/ament_index/resource_index/rosidl_interfaces/omo_r1mini_interfaces\n'}
+[57.511730] (-) TimerEvent: {}
+[57.519069] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[57.580238] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/battery.h\n'}
+[57.612140] (-) TimerEvent: {}
+[57.638688] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/calg.h\n'}
+[57.693264] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/color.h\n'}
+[57.712521] (-) TimerEvent: {}
+[57.750688] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/battery__functions.h\n'}
+[57.805427] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/battery__struct.h\n'}
+[57.812859] (-) TimerEvent: {}
+[57.863197] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/battery__type_support.h\n'}
+[57.913230] (-) TimerEvent: {}
+[57.917222] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/calg__functions.h\n'}
+[57.971477] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/calg__struct.h\n'}
+[58.013741] (-) TimerEvent: {}
+[58.029276] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/calg__type_support.h\n'}
+[58.084241] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/color__functions.h\n'}
+[58.114137] (-) TimerEvent: {}
+[58.141940] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/color__struct.h\n'}
+[58.197934] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/color__type_support.h\n'}
+[58.214502] (-) TimerEvent: {}
+[58.258418] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/onoff__functions.h\n'}
+[58.314972] (-) TimerEvent: {}
+[58.317323] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/onoff__struct.h\n'}
+[58.375007] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/onoff__type_support.h\n'}
+[58.415373] (-) TimerEvent: {}
+[58.430583] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/reset_odom__functions.h\n'}
+[58.488893] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/reset_odom__struct.h\n'}
+[58.515723] (-) TimerEvent: {}
+[58.544269] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/reset_odom__type_support.h\n'}
+[58.599962] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/save_color__functions.h\n'}
+[58.616124] (-) TimerEvent: {}
+[58.659333] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/save_color__struct.h\n'}
+[58.714333] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/save_color__type_support.h\n'}
+[58.718405] (-) TimerEvent: {}
+[58.771270] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/onoff.h\n'}
+[58.818891] (-) TimerEvent: {}
+[58.829329] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/reset_odom.h\n'}
+[58.883364] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/save_color.h\n'}
+[58.919434] (-) TimerEvent: {}
+[58.941658] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/environment/library_path.sh\n'}
+[58.996366] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/environment/library_path.dsv\n'}
+[59.019854] (-) TimerEvent: {}
+[59.057727] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[59.111588] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/battery__rosidl_typesupport_fastrtps_c.h\n'}
+[59.120219] (-) TimerEvent: {}
+[59.169380] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/calg__rosidl_typesupport_fastrtps_c.h\n'}
+[59.220625] (-) TimerEvent: {}
+[59.224556] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/color__rosidl_typesupport_fastrtps_c.h\n'}
+[59.279560] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/onoff__rosidl_typesupport_fastrtps_c.h\n'}
+[59.321037] (-) TimerEvent: {}
+[59.338435] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/reset_odom__rosidl_typesupport_fastrtps_c.h\n'}
+[59.392366] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/save_color__rosidl_typesupport_fastrtps_c.h\n'}
+[59.421443] (-) TimerEvent: {}
+[59.453289] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[59.513924] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[59.521729] (-) TimerEvent: {}
+[59.568113] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/battery__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[59.626472] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/calg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[59.630080] (-) TimerEvent: {}
+[59.678419] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/color__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[59.730555] (-) TimerEvent: {}
+[59.734696] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/onoff__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[59.792051] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/reset_odom__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[59.830938] (-) TimerEvent: {}
+[59.848669] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/save_color__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[59.905939] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[59.931468] (-) TimerEvent: {}
+[59.970182] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[60.025036] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/battery__rosidl_typesupport_introspection_c.h\n'}
+[60.031990] (-) TimerEvent: {}
+[60.082677] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/calg__rosidl_typesupport_introspection_c.h\n'}
+[60.132437] (-) TimerEvent: {}
+[60.137734] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/color__rosidl_typesupport_introspection_c.h\n'}
+[60.193308] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/onoff__rosidl_typesupport_introspection_c.h\n'}
+[60.232863] (-) TimerEvent: {}
+[60.253233] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/reset_odom__rosidl_typesupport_introspection_c.h\n'}
+[60.312418] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/save_color__rosidl_typesupport_introspection_c.h\n'}
+[60.333253] (-) TimerEvent: {}
+[60.372721] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/battery.hpp\n'}
+[60.428011] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/calg.hpp\n'}
+[60.433594] (-) TimerEvent: {}
+[60.488312] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/color.hpp\n'}
+[60.534012] (-) TimerEvent: {}
+[60.546574] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/battery__builder.hpp\n'}
+[60.602039] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/battery__struct.hpp\n'}
+[60.634494] (-) TimerEvent: {}
+[60.658285] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/battery__traits.hpp\n'}
+[60.713079] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/calg__builder.hpp\n'}
+[60.734897] (-) TimerEvent: {}
+[60.772022] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/calg__struct.hpp\n'}
+[60.829858] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/calg__traits.hpp\n'}
+[60.835114] (-) TimerEvent: {}
+[60.885793] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/color__builder.hpp\n'}
+[60.935582] (-) TimerEvent: {}
+[60.940169] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/color__struct.hpp\n'}
+[60.995364] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/color__traits.hpp\n'}
+[61.036078] (-) TimerEvent: {}
+[61.052076] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/onoff__builder.hpp\n'}
+[61.106642] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/onoff__struct.hpp\n'}
+[61.136525] (-) TimerEvent: {}
+[61.164532] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/onoff__traits.hpp\n'}
+[61.219953] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/reset_odom__builder.hpp\n'}
+[61.236974] (-) TimerEvent: {}
+[61.280418] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/reset_odom__struct.hpp\n'}
+[61.335341] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/reset_odom__traits.hpp\n'}
+[61.337262] (-) TimerEvent: {}
+[61.392382] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/save_color__builder.hpp\n'}
+[61.437822] (-) TimerEvent: {}
+[61.450420] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/save_color__struct.hpp\n'}
+[61.504389] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/save_color__traits.hpp\n'}
+[61.538232] (-) TimerEvent: {}
+[61.561221] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/onoff.hpp\n'}
+[61.617604] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/reset_odom.hpp\n'}
+[61.638677] (-) TimerEvent: {}
+[61.674577] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/save_color.hpp\n'}
+[61.732179] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/battery__rosidl_typesupport_introspection_cpp.hpp\n'}
+[61.738920] (-) TimerEvent: {}
+[61.788676] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/calg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[61.839403] (-) TimerEvent: {}
+[61.843020] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/color__rosidl_typesupport_introspection_cpp.hpp\n'}
+[61.898492] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/onoff__rosidl_typesupport_introspection_cpp.hpp\n'}
+[61.939846] (-) TimerEvent: {}
+[61.955340] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/reset_odom__rosidl_typesupport_introspection_cpp.hpp\n'}
+[62.011149] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/include/omo_r1mini_interfaces/srv/detail/save_color__rosidl_typesupport_introspection_cpp.hpp\n'}
+[62.040293] (-) TimerEvent: {}
+[62.071820] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/environment/pythonpath.sh\n'}
+[62.127464] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/environment/pythonpath.dsv\n'}
+[62.140716] (-) TimerEvent: {}
+[62.186309] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/__init__.py\n'}
+[62.241178] (-) TimerEvent: {}
+[62.243790] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/srv/__init__.py\n'}
+[62.300568] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/srv/_battery.py\n'}
+[62.341684] (-) TimerEvent: {}
+[62.359885] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/srv/_calg.py\n'}
+[62.415650] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/srv/_color.py\n'}
+[62.442082] (-) TimerEvent: {}
+[62.471764] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/srv/_onoff.py\n'}
+[62.526063] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/srv/_reset_odom.py\n'}
+[62.542527] (-) TimerEvent: {}
+[62.583642] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/srv/_save_color.py\n'}
+[62.641088] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/omo_r1mini_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[62.643135] (-) TimerEvent: {}
+[62.704753] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/omo_r1mini_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[62.743612] (-) TimerEvent: {}
+[62.763853] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/omo_r1mini_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[62.821589] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__python.so\n'}
+[62.844188] (-) TimerEvent: {}
+[62.879145] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Battery.idl\n'}
+[62.933852] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Calg.idl\n'}
+[62.944366] (-) TimerEvent: {}
+[62.991735] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Color.idl\n'}
+[63.044775] (-) TimerEvent: {}
+[63.047681] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Onoff.idl\n'}
+[63.104920] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/ResetOdom.idl\n'}
+[63.145193] (-) TimerEvent: {}
+[63.162849] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/SaveColor.idl\n'}
+[63.222342] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Battery.srv\n'}
+[63.245747] (-) TimerEvent: {}
+[63.279149] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Battery_Request.msg\n'}
+[63.333926] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Battery_Response.msg\n'}
+[63.346114] (-) TimerEvent: {}
+[63.393271] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Calg.srv\n'}
+[63.446560] (-) TimerEvent: {}
+[63.449772] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Calg_Request.msg\n'}
+[63.509070] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Calg_Response.msg\n'}
+[63.546962] (-) TimerEvent: {}
+[63.566487] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Color.srv\n'}
+[63.621557] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Color_Request.msg\n'}
+[63.647362] (-) TimerEvent: {}
+[63.679080] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Color_Response.msg\n'}
+[63.733872] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Onoff.srv\n'}
+[63.747728] (-) TimerEvent: {}
+[63.792048] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Onoff_Request.msg\n'}
+[63.847323] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/Onoff_Response.msg\n'}
+[63.849679] (-) TimerEvent: {}
+[63.907660] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/ResetOdom.srv\n'}
+[63.950112] (-) TimerEvent: {}
+[63.964961] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/ResetOdom_Request.msg\n'}
+[64.021247] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/ResetOdom_Response.msg\n'}
+[64.050540] (-) TimerEvent: {}
+[64.077753] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/SaveColor.srv\n'}
+[64.133236] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/SaveColor_Request.msg\n'}
+[64.150953] (-) TimerEvent: {}
+[64.191191] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/srv/SaveColor_Response.msg\n'}
+[64.247934] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/ament_index/resource_index/package_run_dependencies/omo_r1mini_interfaces\n'}
+[64.251104] (-) TimerEvent: {}
+[64.305987] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/ament_index/resource_index/parent_prefix_path/omo_r1mini_interfaces\n'}
+[64.351603] (-) TimerEvent: {}
+[64.363774] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/environment/ament_prefix_path.sh\n'}
+[64.418825] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/environment/ament_prefix_path.dsv\n'}
+[64.452000] (-) TimerEvent: {}
+[64.477983] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/environment/path.sh\n'}
+[64.533172] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/environment/path.dsv\n'}
+[64.552401] (-) TimerEvent: {}
+[64.592036] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/local_setup.bash\n'}
+[64.648228] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/local_setup.sh\n'}
+[64.652577] (-) TimerEvent: {}
+[64.709051] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/local_setup.zsh\n'}
+[64.753082] (-) TimerEvent: {}
+[64.765432] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/local_setup.dsv\n'}
+[64.820458] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/package.dsv\n'}
+[64.853586] (-) TimerEvent: {}
+[64.878686] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/ament_index/resource_index/packages/omo_r1mini_interfaces\n'}
+[64.934046] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[64.953953] (-) TimerEvent: {}
+[64.992830] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[65.048278] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[65.054243] (-) TimerEvent: {}
+[65.104367] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[65.154661] (-) TimerEvent: {}
+[65.161732] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[65.219259] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[65.255069] (-) TimerEvent: {}
+[65.292719] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[65.348467] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfacesConfig.cmake\n'}
+[65.355355] (-) TimerEvent: {}
+[65.405530] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfacesConfig-version.cmake\n'}
+[65.455792] (-) TimerEvent: {}
+[65.460605] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/package.xml\n'}
+[65.516374] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_generator_c.so\n'}
+[65.520244] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_generator_c.so" to ""\n'}
+[65.522058] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[65.523473] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[65.524286] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_typesupport_c.so\n'}
+[65.526089] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[65.526798] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[65.529781] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[65.533605] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_typesupport_cpp.so\n'}
+[65.535928] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/libomo_r1mini_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[65.556059] (-) TimerEvent: {}
+[65.658002] (-) TimerEvent: {}
+[65.742982] (omo_r1mini_interfaces) StdoutLine: {'line': b"Compiling '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages/omo_r1mini_interfaces/__init__.py'...\n"}
+[65.758347] (-) TimerEvent: {}
+[65.802480] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfaces__rosidl_generator_cExport.cmake\n'}
+[65.804877] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[65.806162] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[65.806881] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[65.807761] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[65.808632] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[65.809699] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfaces__rosidl_generator_cppExport.cmake\n'}
+[65.810769] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[65.811597] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[65.812614] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[65.813424] (omo_r1mini_interfaces) StdoutLine: {'line': b'-- Installing: /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/cmake/omo_r1mini_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[65.830321] (omo_r1mini_interfaces) CommandEnded: {'returncode': 0}
+[65.858571] (-) TimerEvent: {}
+[65.960142] (-) TimerEvent: {}
+[66.062720] (-) TimerEvent: {}
+[66.164338] (-) TimerEvent: {}
+[66.265977] (-) TimerEvent: {}
+[66.367561] (-) TimerEvent: {}
+[66.472710] (-) TimerEvent: {}
+[66.536927] (omo_r1mini_interfaces) JobEnded: {'identifier': 'omo_r1mini_interfaces', 'rc': 0}
+[66.543084] (-) EventReactorShutdown: {}

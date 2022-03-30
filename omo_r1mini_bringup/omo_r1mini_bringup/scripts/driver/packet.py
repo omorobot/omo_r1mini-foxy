@@ -45,6 +45,5 @@ class Packet:
     param_str = ''
     for i in range(0, template_write_[cmd]['len']):
       param_str += ',' + str(argv_d[list(template_write_[cmd]['data'])[i]])
-
     self.port.clear_port()
     self.port.write_port(('$' + template_write_[cmd]['type'] + cmd + param_str + '\r\n').encode())

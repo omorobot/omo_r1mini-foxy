@@ -1,0 +1,29 @@
+{
+  "package_name": "omo_r1mini_interfaces",
+  "output_dir": "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_typesupport_introspection_cpp/omo_r1mini_interfaces",
+  "template_dir": "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource",
+  "idl_tuples": [
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/Battery.idl",
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/Calg.idl",
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/Color.idl",
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/Onoff.idl",
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/ResetOdom.idl",
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces:srv/SaveColor.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/foxy/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp",
+    "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_introspection_cpp/__init__.py",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/idl__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/msg__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces/srv/Battery.idl",
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces/srv/Calg.idl",
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces/srv/Color.idl",
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces/srv/Onoff.idl",
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces/srv/ResetOdom.idl",
+    "/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces/rosidl_adapter/omo_r1mini_interfaces/srv/SaveColor.idl"
+  ]
+}

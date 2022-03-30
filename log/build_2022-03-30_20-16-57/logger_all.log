@@ -1,0 +1,183 @@
+[0.836s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'omo_r1mini_interfaces']
+[0.837s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f7642fca0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=['omo_r1mini_interfaces'], packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f7642fca0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f7643a250>)
+[0.867s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.868s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.868s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.868s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.868s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.869s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.869s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy'
+[0.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.871s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.872s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.955s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.955s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.956s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.956s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.957s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.957s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.958s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.958s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.959s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.959s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.960s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.960s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini) by extensions ['ignore', 'ignore_ament_install']
+[0.961s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini) by extension 'ignore'
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini) by extension 'ignore_ament_install'
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini) by extensions ['colcon_pkg']
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini) by extension 'colcon_pkg'
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini) by extensions ['colcon_meta']
+[0.962s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini) by extension 'colcon_meta'
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini) by extensions ['ros']
+[0.963s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini) by extension 'ros'
+[0.981s] DEBUG:colcon.colcon_core.package_identification:Package 'omo_r1mini' with type 'ros.ament_cmake' and name 'omo_r1mini'
+[0.983s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.984s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_bringup) by extension 'ignore'
+[0.985s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_bringup) by extension 'ignore_ament_install'
+[0.985s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_bringup) by extensions ['colcon_pkg']
+[0.985s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_bringup) by extension 'colcon_pkg'
+[0.985s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_bringup) by extensions ['colcon_meta']
+[0.985s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_bringup) by extension 'colcon_meta'
+[0.986s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_bringup) by extensions ['ros']
+[0.986s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_bringup) by extension 'ros'
+[0.990s] DEBUG:colcon.colcon_core.package_identification:Package 'omo_r1mini_bringup' with type 'ros.ament_python' and name 'omo_r1mini_bringup'
+[0.991s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_cartographer) by extensions ['ignore', 'ignore_ament_install']
+[0.992s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_cartographer) by extension 'ignore'
+[0.992s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_cartographer) by extension 'ignore_ament_install'
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_cartographer) by extensions ['colcon_pkg']
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_cartographer) by extension 'colcon_pkg'
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_cartographer) by extensions ['colcon_meta']
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_cartographer) by extension 'colcon_meta'
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_cartographer) by extensions ['ros']
+[0.994s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_cartographer) by extension 'ros'
+[0.996s] DEBUG:colcon.colcon_core.package_identification:Package 'omo_r1mini_cartographer' with type 'ros.ament_cmake' and name 'omo_r1mini_cartographer'
+[0.997s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_description) by extensions ['ignore', 'ignore_ament_install']
+[0.997s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_description) by extension 'ignore'
+[0.998s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_description) by extension 'ignore_ament_install'
+[0.998s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_description) by extensions ['colcon_pkg']
+[0.998s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_description) by extension 'colcon_pkg'
+[0.998s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_description) by extensions ['colcon_meta']
+[0.998s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_description) by extension 'colcon_meta'
+[0.999s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_description) by extensions ['ros']
+[0.999s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_description) by extension 'ros'
+[1.002s] DEBUG:colcon.colcon_core.package_identification:Package 'omo_r1mini_description' with type 'ros.ament_cmake' and name 'omo_r1mini_description'
+[1.003s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[1.003s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_gazebo) by extension 'ignore'
+[1.003s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_gazebo) by extension 'ignore_ament_install'
+[1.004s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_gazebo) by extensions ['colcon_pkg']
+[1.004s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_gazebo) by extension 'colcon_pkg'
+[1.004s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_gazebo) by extensions ['colcon_meta']
+[1.004s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_gazebo) by extension 'colcon_meta'
+[1.005s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_gazebo) by extensions ['ros']
+[1.005s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_gazebo) by extension 'ros'
+[1.009s] DEBUG:colcon.colcon_core.package_identification:Package 'omo_r1mini_gazebo' with type 'ros.ament_cmake' and name 'omo_r1mini_gazebo'
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_interfaces) by extension 'ignore'
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_interfaces) by extension 'ignore_ament_install'
+[1.011s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_interfaces) by extensions ['colcon_pkg']
+[1.011s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_interfaces) by extension 'colcon_pkg'
+[1.011s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_interfaces) by extensions ['colcon_meta']
+[1.011s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_interfaces) by extension 'colcon_meta'
+[1.011s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_interfaces) by extensions ['ros']
+[1.012s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_interfaces) by extension 'ros'
+[1.014s] DEBUG:colcon.colcon_core.package_identification:Package 'omo_r1mini_interfaces' with type 'ros.ament_cmake' and name 'omo_r1mini_interfaces'
+[1.015s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_navigation2) by extensions ['ignore', 'ignore_ament_install']
+[1.015s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_navigation2) by extension 'ignore'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_navigation2) by extension 'ignore_ament_install'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_navigation2) by extensions ['colcon_pkg']
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_navigation2) by extension 'colcon_pkg'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_navigation2) by extensions ['colcon_meta']
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_navigation2) by extension 'colcon_meta'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_navigation2) by extensions ['ros']
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_navigation2) by extension 'ros'
+[1.019s] DEBUG:colcon.colcon_core.package_identification:Package 'omo_r1mini_navigation2' with type 'ros.ament_cmake' and name 'omo_r1mini_navigation2'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_teleop) by extensions ['ignore', 'ignore_ament_install']
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_teleop) by extension 'ignore'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_teleop) by extension 'ignore_ament_install'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_teleop) by extensions ['colcon_pkg']
+[1.021s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_teleop) by extension 'colcon_pkg'
+[1.021s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_teleop) by extensions ['colcon_meta']
+[1.021s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_teleop) by extension 'colcon_meta'
+[1.021s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_teleop) by extensions ['ros']
+[1.021s] Level 1:colcon.colcon_core.package_identification:_identify(omo_r1mini_teleop) by extension 'ros'
+[1.024s] DEBUG:colcon.colcon_core.package_identification:Package 'omo_r1mini_teleop' with type 'ros.ament_python' and name 'omo_r1mini_teleop'
+[1.024s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.024s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.025s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.025s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.025s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.140s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'omo_r1mini_cartographer' in 'omo_r1mini_cartographer'
+[1.141s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'omo_r1mini_description' in 'omo_r1mini_description'
+[1.141s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'omo_r1mini_gazebo' in 'omo_r1mini_gazebo'
+[1.141s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'omo_r1mini_navigation2' in 'omo_r1mini_navigation2'
+[1.142s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'omo_r1mini_teleop' in 'omo_r1mini_teleop'
+[1.142s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'omo_r1mini_bringup' in 'omo_r1mini_bringup'
+[1.142s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'omo_r1mini' in 'omo_r1mini'
+[1.146s] Level 5:colcon.colcon_core.verb:set package 'omo_r1mini_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.147s] Level 5:colcon.colcon_core.verb:set package 'omo_r1mini_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.147s] Level 5:colcon.colcon_core.verb:set package 'omo_r1mini_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.147s] Level 5:colcon.colcon_core.verb:set package 'omo_r1mini_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.147s] Level 5:colcon.colcon_core.verb:set package 'omo_r1mini_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.147s] Level 5:colcon.colcon_core.verb:set package 'omo_r1mini_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'omo_r1mini_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'omo_r1mini_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.148s] Level 5:colcon.colcon_core.verb:set package 'omo_r1mini_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.148s] DEBUG:colcon.colcon_core.verb:Building package 'omo_r1mini_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces', 'merge_install': False, 'path': '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/omo_r1mini_interfaces', 'symlink_install': True, 'test_result_base': None}
+[1.171s] WARNING:colcon.colcon_core.verb:Some selected packages are already built in one or more underlay workspaces:
+	'omo_r1mini_interfaces' is in: /home/r1mini/ros2_ws/install/omo_r1mini_interfaces
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding omo_r1mini_interfaces
+
+This may be promoted to an error in a future release of colcon-core.
+[1.174s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.187s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.190s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/omo_r1mini_interfaces' with build type 'ament_cmake'
+[1.191s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/omo_r1mini_interfaces'
+[1.215s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.216s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.216s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.270s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy /usr/bin/cmake /home/r1mini/ros2_ws/src/omo_r1mini-foxy/omo_r1mini_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces
+[8.668s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/r1mini/ros2_ws/install/omo_r1mini_teleop:/home/r1mini/ros2_ws/install/omo_r1mini_bringup:/opt/ros/foxy /usr/bin/cmake /home/r1mini/ros2_ws/src/omo_r1mini-foxy/omo_r1mini_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces
+[8.753s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(omo_r1mini_interfaces)
+[8.777s] Level 1:colcon.colcon_core.environment:checking '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces' for CMake module files
+[8.780s] Level 1:colcon.colcon_core.environment:checking '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces' for CMake config files
+[8.782s] Level 1:colcon.colcon_core.environment:checking '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/bin'
+[8.783s] Level 1:colcon.colcon_core.environment:checking '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/pkgconfig/omo_r1mini_interfaces.pc'
+[8.783s] Level 1:colcon.colcon_core.environment:checking '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/lib/python3.8/site-packages'
+[8.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/package.ps1'
+[8.792s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/package.dsv'
+[8.795s] INFO:colcon.colcon_core.shell:Creating package script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/package.sh'
+[8.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/package.bash'
+[8.804s] INFO:colcon.colcon_core.shell:Creating package script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/omo_r1mini_interfaces/package.zsh'
+[8.807s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_interfaces/share/colcon-core/packages/omo_r1mini_interfaces)
+[8.811s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.813s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.813s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[8.814s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.849s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.850s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.850s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[33.879s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+[33.881s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[33.886s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/local_setup.ps1'
+[33.892s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/_local_setup_util_ps1.py'
+[33.899s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/setup.ps1'
+[33.907s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/local_setup.sh'
+[33.910s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/_local_setup_util_sh.py'
+[33.912s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/setup.sh'
+[33.920s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/local_setup.bash'
+[33.923s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/setup.bash'
+[33.930s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/local_setup.zsh'
+[33.932s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/setup.zsh'

@@ -1,0 +1,4 @@
+source;share/omo_r1mini_navigation2/local_setup.bash
+source;share/omo_r1mini_navigation2/local_setup.dsv
+source;share/omo_r1mini_navigation2/local_setup.sh
+source;share/omo_r1mini_navigation2/local_setup.zsh

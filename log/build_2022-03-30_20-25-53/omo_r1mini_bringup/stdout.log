@@ -1,0 +1,32 @@
+running develop
+running egg_info
+creating omo_r1mini_bringup.egg-info
+writing omo_r1mini_bringup.egg-info/PKG-INFO
+writing dependency_links to omo_r1mini_bringup.egg-info/dependency_links.txt
+writing entry points to omo_r1mini_bringup.egg-info/entry_points.txt
+writing requirements to omo_r1mini_bringup.egg-info/requires.txt
+writing top-level names to omo_r1mini_bringup.egg-info/top_level.txt
+writing manifest file 'omo_r1mini_bringup.egg-info/SOURCES.txt'
+reading manifest file 'omo_r1mini_bringup.egg-info/SOURCES.txt'
+writing manifest file 'omo_r1mini_bringup.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/lib/python3.8/site-packages/site.py
+Creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/lib/python3.8/site-packages/omo-r1mini-bringup.egg-link (link to .)
+Installing omo_r1mini_mcu_node script to /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/lib/omo_r1mini_bringup
+Installing omo_r1mini_motor_setting_node script to /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/lib/omo_r1mini_bringup
+
+Installed /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_bringup
+running install_data
+creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/ament_index
+creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/ament_index/resource_index
+creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/ament_index/resource_index/packages
+copying resource/omo_r1mini_bringup -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/ament_index/resource_index/packages
+copying package.xml -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup
+creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/launch
+copying launch/omo_r1mini_motor_setting.launch.py -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/launch
+copying launch/omo_r1mini_mcu.launch.py -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/launch
+copying launch/omo_r1mini_lidar.launch.py -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/launch
+copying launch/omo_r1mini_bringup.launch.py -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/launch
+creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/param
+copying param/omo_r1mini_lidar.yaml -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/param
+copying param/omo_r1mini_mcu.yaml -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_bringup/share/omo_r1mini_bringup/param

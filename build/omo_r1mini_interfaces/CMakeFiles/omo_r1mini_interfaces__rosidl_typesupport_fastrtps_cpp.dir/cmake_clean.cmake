@@ -1,0 +1,27 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/battery__type_support.cpp.o"
+  "CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/calg__type_support.cpp.o"
+  "CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/color__type_support.cpp.o"
+  "CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/onoff__type_support.cpp.o"
+  "CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/reset_odom__type_support.cpp.o"
+  "CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/save_color__type_support.cpp.o"
+  "libomo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.pdb"
+  "libomo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.so"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/battery__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/calg__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/color__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/battery__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/calg__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/color__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/onoff__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/reset_odom__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/dds_fastrtps/save_color__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/onoff__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/reset_odom__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/omo_r1mini_interfaces/srv/detail/save_color__rosidl_typesupport_fastrtps_cpp.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/omo_r1mini_interfaces__rosidl_typesupport_fastrtps_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

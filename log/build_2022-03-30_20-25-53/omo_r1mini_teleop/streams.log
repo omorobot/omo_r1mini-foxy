@@ -1,0 +1,30 @@
+[8.252s] Invoking command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_teleop': PYTHONPATH=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop --editable --build-directory /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_teleop/build --no-deps install_data --install-dir /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop
+[10.177s] running develop
+[11.344s] running egg_info
+[11.350s] creating omo_r1mini_teleop.egg-info
+[11.354s] writing omo_r1mini_teleop.egg-info/PKG-INFO
+[11.357s] writing dependency_links to omo_r1mini_teleop.egg-info/dependency_links.txt
+[11.360s] writing entry points to omo_r1mini_teleop.egg-info/entry_points.txt
+[11.363s] writing requirements to omo_r1mini_teleop.egg-info/requires.txt
+[11.365s] writing top-level names to omo_r1mini_teleop.egg-info/top_level.txt
+[11.369s] writing manifest file 'omo_r1mini_teleop.egg-info/SOURCES.txt'
+[11.636s] reading manifest file 'omo_r1mini_teleop.egg-info/SOURCES.txt'
+[11.644s] writing manifest file 'omo_r1mini_teleop.egg-info/SOURCES.txt'
+[12.010s] running build_ext
+[12.014s] Creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/lib/python3.8/site-packages/site.py
+[12.030s] Creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/lib/python3.8/site-packages/omo-r1mini-teleop.egg-link (link to .)
+[12.044s] Installing teleop_joy script to /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/lib/omo_r1mini_teleop
+[12.049s] Installing teleop_keyboard script to /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/lib/omo_r1mini_teleop
+[12.051s] 
+[12.054s] Installed /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_teleop
+[12.056s] running install_data
+[12.059s] creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/share/ament_index
+[12.062s] creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/share/ament_index/resource_index
+[12.068s] creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/share/ament_index/resource_index/packages
+[12.071s] copying resource/omo_r1mini_teleop -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/share/ament_index/resource_index/packages
+[12.074s] copying package.xml -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/share/omo_r1mini_teleop
+[12.077s] creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/share/omo_r1mini_teleop/launch
+[12.080s] copying launch/teleop_joy.launch.py -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/share/omo_r1mini_teleop/launch
+[12.083s] creating /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/share/omo_r1mini_teleop/param
+[12.085s] copying param/teleop_joy.param.yaml -> /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/share/omo_r1mini_teleop/param
+[12.513s] Invoked command in '/home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_teleop' returned '0': PYTHONPATH=/home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop --editable --build-directory /home/r1mini/ros2_ws/src/omo_r1mini-foxy/build/omo_r1mini_teleop/build --no-deps install_data --install-dir /home/r1mini/ros2_ws/src/omo_r1mini-foxy/install/omo_r1mini_teleop

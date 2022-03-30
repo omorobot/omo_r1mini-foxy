@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from omo_r1mini_interfaces/srv/ResetOdom.srv
+// generated code does not contain a copyright notice
+
+
+module omo_r1mini_interfaces {
+  module srv {
+    struct ResetOdom_Request {
+      double x;
+
+      double y;
+
+      double theta;
+    };
+    struct ResetOdom_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

@@ -12,6 +12,12 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Joy
 from rclpy.qos import QoSProfile
 
+from omo_r1mini_interfaces.srv import Battery
+from omo_r1mini_interfaces.srv import Color
+from omo_r1mini_interfaces.srv import SaveColor
+from omo_r1mini_interfaces.srv import ResetOdom
+from omo_r1mini_interfaces.srv import Onoff
+from omo_r1mini_interfaces.srv import Calg
 
 OMO_R1MINI_MAX_LIN_VEL = 0.50
 OMO_R1MINI_MAX_ANG_VEL = 5.70

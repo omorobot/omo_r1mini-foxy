@@ -1,0 +1,4 @@
+[console_scripts]
+teleop_joy = omo_r1mini_teleop.script.teleop_joy:main
+teleop_keyboard = omo_r1mini_teleop.script.teleop_keyboard:main
+

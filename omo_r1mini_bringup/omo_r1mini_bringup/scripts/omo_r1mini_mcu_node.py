@@ -11,12 +11,12 @@ from nav_msgs.msg import Odometry
 from sensor_msgs.msg import Imu, JointState
 from tf2_ros import TransformBroadcaster
 
-#from omo_r1mini_bringup.srv import Battery
-#from omo_r1mini_bringup.srv import Color, ColorResponse
-#from omo_r1mini_bringup.srv import SaveColor, SaveColorResponse
-#from omo_r1mini_bringup.srv import ResetOdom, ResetOdomResponse
-#from omo_r1mini_bringup.srv import Onoff, OnoffResponse
-#from omo_r1mini_bringup.srv import Calg, CalgResponse
+from omo_r1mini_interfaces.srv import Battery
+from omo_r1mini_interfaces.srv import Color
+from omo_r1mini_interfaces.srv import SaveColor
+from omo_r1mini_interfaces.srv import ResetOdom
+from omo_r1mini_interfaces.srv import Onoff
+from omo_r1mini_interfaces.srv import Calg
 
 from .driver.packet import *
 from .driver.port import *
@@ -36,6 +36,11 @@ class OMOR1MiniNode(Node):
     self.wheel_radius = self.get_parameter_or('/wheel/radius', Parameter('/wheel/radius', Parameter.Type.DOUBLE, 0.0335)).get_parameter_value().double_value
     self.sensor_enc_pulse = self.get_parameter_or('/sensor/enc_pulse', Parameter('/sensor/enc_pulse', Parameter.Type.INTEGER, 44)).get_parameter_value().integer_value
 
+    # Services
+    self.srvHeadlight = self.create_service(Onoff, 'set_headlight', self.cbSrv_headlight)
+    self.srvSetColor = self.create_service(Color, 'set_rgbled', self.cbSrv_setColor)
+    self.srvResetODOM = self.create_service(Onoff, 'reset_odom', self.cbSrv_resetODOM)
+    self.srvCheckBAT = self.create_service(Battery, 'check_battery', self.cbSrv_checkBattery)
     # Init data
     self.last_pos = [0.0, 0.0]
     self.d_odom_pose = \
@@ -56,11 +61,15 @@ class OMOR1MiniNode(Node):
     self.d_current_gyro = copy.deepcopy(template_read_['GYRO']['data'])
     self.d_current_odo = copy.deepcopy(template_read_['ODO']['data'])
     self.d_current_diffv = copy.deepcopy(template_read_['DIFFV']['data'])
+    self.d_setHDLT = copy.deepcopy(template_write_['HDLT']['data'])
+    self.d_setCOLOR = copy.deepcopy(template_write_['COLOR']['data'])
+    self.d_setODO = copy.deepcopy(template_write_['ODO']['data'])
+    self.d_getBAT = copy.deepcopy(template_read_['BAT']['data'])
 
 
     # Set subscriber
     self.subCmdVelMsg = self.create_subscription(Twist, 'cmd_vel', self.cbCmdVelMsg, 10)
-
+    
     # Set publisher
     self.pubJointStates = self.create_publisher(JointState, 'joint_states', 10)
     self.pubIMU = self.create_publisher(Imu, 'imu', 10)
@@ -73,6 +82,55 @@ class OMOR1MiniNode(Node):
   # def __del__(self):
   #   self.destroy_timer(self.timerProc)
 
+  def cbSrv_headlight(self, request, response):
+    onoff = 0
+    if request.set == True:
+      onoff = 1
+      self.d_setHDLT['switch'] = 1
+    else:
+      self.d_setHDLT['switch'] = 0
+    #command = "$cHDLT," + onoff
+    self.get_logger().info('Service call Headlight:%s'%(onoff))
+    self.packet.write_data('HDLT', self.d_setHDLT)
+    return response
+  
+  def cbSrv_setColor(self, request, response):
+    self.d_setCOLOR['red'] = request.red
+    self.d_setCOLOR['green'] = request.green
+    self.d_setCOLOR['blue'] = request.blue
+    self.get_logger().info("SET COLOR R(%s)G(%s)B(%s)"
+      %(request.red, request.green, request.blue))
+    self.packet.write_data('COLOR', self.d_setCOLOR)
+    return response
+
+  def cbSrv_checkBattery(self, request, response):
+    self.d_getBAT = self.packet.read_data('BAT')
+    self.get_logger().info("Battery V:%s, SOC: %s, Current %s"
+      %(self.d_getBAT['voltage'], self.d_getBAT['soc'], self.d_getBAT['current_hour']))
+    response.volt = float(self.d_getBAT['voltage'])/10.0
+    response.soc = float(self.d_getBAT['soc'])
+    response.current = float(self.d_getBAT['current_hour'])
+    return response
+
+  def cbSrv_resetODOM(self, request, response):
+    if request.set == True:
+      self.packet.write_data('ODO', self.d_setODO)
+      self.get_logger().info('RESET ODO')
+    return response
+  
+  def cbSrv_setBuzzer(self, request, response):
+    onoff = '0'
+    if request.set == True:
+        onoff = '1'
+    command = "$sBUZEN," + onoff
+    self.ph.write_port(command)
+    return OnoffResponse()
+
+  def calibrate_gyro(self, req):
+    command = "$sCALG,1"
+    self.ph.write_port(command)
+    return CalgResponse()
+      
   def cbCmdVelMsg(self, msg):
     self.d_target_twist['linear'] = int(msg.linear.x * 1000)
     self.d_target_twist['angular'] = int(msg.angular.z * 1000)
@@ -102,7 +160,7 @@ class OMOR1MiniNode(Node):
     # update datas(for publish : odom, joint state, etc)
     self.fnPubSensorData()
     b = self.get_clock().now()
-    self.get_logger().info('looptime : %s' % (b-a).nanoseconds)
+    #self.get_logger().info('looptime : %s' % (b-a).nanoseconds)
     
     ########################
     # needs to be done in 45 msec until here (reserve 5 msec for meeting 50 msec control interval)

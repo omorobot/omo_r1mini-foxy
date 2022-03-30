@@ -64,7 +64,7 @@ template_write_ = \
   },
   'COLOR': # LED Light control
   {
-    'type':'s',
+    'type':'c',
     # TODO:: 'c' mode exists
     'len':3, # R, G, B in range(0, 256)
     'data':
