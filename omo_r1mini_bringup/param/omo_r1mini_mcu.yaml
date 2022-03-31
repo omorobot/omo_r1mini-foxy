@@ -1,4 +1,4 @@
-omo_r1mini_node:
+omo_r1mini_mcu_node:
   ros__parameters:
     port:
       name: "/dev/ttyMCU"
@@ -9,12 +9,12 @@ omo_r1mini_node:
       radius: 0.0335
 
     motor:
-      gear_ratio: 213
+      gear_ratio: 21.3
       max_lin_vel_x: 2.0
       max_rot_vel_z: 2.5
       
     sensor:
-      enc_pulse: 44
+      enc_pulse: 1440.0
 
 diff_drive_controller:
   ros__parameters:

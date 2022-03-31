@@ -36,9 +36,7 @@ class PacketHandler:
       }
 
       self.incomming_info = ['ODO', 'VW', 'POSE', 'ACCL', 'GYRO']
-      print('Serial port: %s'%(self.port_name))
-      #rospy.loginfo('Serial port: %s', _port_name)
-      #rospy.loginfo('Serial baud rate: %s', _baud_rate)
+      #print('Serial port: %s'%(self.port_name))
 
    def get_port_state(self):
       return self.ser.isOpen()

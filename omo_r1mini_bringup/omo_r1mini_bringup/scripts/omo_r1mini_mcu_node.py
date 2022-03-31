@@ -77,17 +77,29 @@ class ComplementaryFilter():
 class OMOR1MiniNode(Node):
   def __init__(self):
     super().__init__('omo_r1mini_motor_setting')
+    self.declare_parameters(
+      namespace='',
+      parameters=[
+          ('motor.gear_ratio', None),
+          ('motor.max_lin_vel_x', None),
+          ('sensor.enc_pulse', None),
+      ])
     # Get parameter values
-    _port_name = self.get_parameter_or('/port/name', Parameter('/port/name', Parameter.Type.STRING, '/dev/ttyTHS1')).get_parameter_value().string_value
-    _port_baudrate = self.get_parameter_or('/port/baudrate', Parameter('/port/baudrate', Parameter.Type.INTEGER, 115200)).get_parameter_value().integer_value
+    _port_name = self.get_parameter_or('port.name', Parameter('port.name', Parameter.Type.STRING, '/dev/ttyTHS1')).get_parameter_value().string_value
+    _port_baudrate = self.get_parameter_or('port.baudrate', Parameter('port.baudrate', Parameter.Type.INTEGER, 115200)).get_parameter_value().integer_value
 
-    self.gear_ratio = self.get_parameter_or('/motor/gear_ratio', Parameter('/motor/gear_ratio', Parameter.Type.INTEGER, 213)).get_parameter_value().integer_value
-    self.wheel_separation = self.get_parameter_or('/wheel/separation', Parameter('/wheel/separation', Parameter.Type.DOUBLE, 0.17)).get_parameter_value().double_value # 0.085 cm x 2
-    self.wheel_radius = self.get_parameter_or('/wheel/radius', Parameter('/wheel/radius', Parameter.Type.DOUBLE, 0.0335)).get_parameter_value().double_value
-    self.enc_pulse = self.get_parameter_or('/sensor/enc_pulse', Parameter('/sensor/enc_pulse', Parameter.Type.INTEGER, 44)).get_parameter_value().integer_value
-    self.use_gyro = self.get_parameter_or('/sensor/use_gyro', Parameter('/sensor/use_gyro', Parameter.Type.BOOL, False)).get_parameter_value().bool_value
+    self.gear_ratio = self.get_parameter_or('motor.gear_ratio', Parameter('motor.gear_ratio', Parameter.Type.DOUBLE, 21.3)).get_parameter_value().double_value
+    self.wheel_separation = self.get_parameter_or('wheel.separation', Parameter('wheel.separation', Parameter.Type.DOUBLE, 0.17)).get_parameter_value().double_value # 0.085 cm x 2
+    self.wheel_radius = self.get_parameter_or('wheel.radius', Parameter('wheel.radius', Parameter.Type.DOUBLE, 0.0335)).get_parameter_value().double_value
+    self.enc_pulse = self.get_parameter_or('sensor.enc_pulse', Parameter('sensor.enc_pulse', Parameter.Type.DOUBLE, 44.0)).get_parameter_value().double_value
+    self.use_gyro = self.get_parameter_or('sensor.use_gyro', Parameter('sensor.use_gyro', Parameter.Type.BOOL, False)).get_parameter_value().bool_value
+    print('GEAR RATIO:\t\t%s'%(self.gear_ratio))
+    print('WHEEL SEPARATION:\t%s'%(self.wheel_separation))
+    print('WHEEL RADIUS:\t\t%s'%(self.wheel_radius))
+    print('ENC_PULSES:\t\t%s'%(self.enc_pulse))
+
     self.distance_per_pulse = 2*math.pi*self.wheel_radius / self.enc_pulse / self.gear_ratio
-
+    print('DISTANCE PER PULSE \t:%s'%(self.distance_per_pulse))
     # Packet handler
     self.ph = PacketHandler(_port_name, _port_baudrate)
     self.ph.ser.reset_input_buffer() 
@@ -183,8 +195,8 @@ class OMOR1MiniNode(Node):
     d_y = trans_vel * math.sin(self.odom_pose.theta) 
     self.odom_pose.x += d_x * dt
     self.odom_pose.y += d_y * dt
-    self.get_logger().info('ODO X:%s, Y:%s, Theta:%s'
-        %(self.odom_pose.x,self.odom_pose.y,self.odom_pose.theta))
+    #print('ODO X:%s, Y:%s, Theta:%s'
+    #    %(self.odom_pose.x,self.odom_pose.y,self.odom_pose.theta))
     odom_orientation_quat = quaternion_from_euler(0, 0, self.odom_pose.theta)
 
     self.odom_vel.x = trans_vel
