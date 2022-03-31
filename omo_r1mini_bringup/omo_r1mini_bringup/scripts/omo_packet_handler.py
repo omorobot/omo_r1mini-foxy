@@ -1,112 +1,108 @@
 #!/usr/bin/env python
-import rclpy
-from rclpy.node import Node
-from rclpy.logging import get_logger
 
 import serial
-#import rospy
 import io
 from time import sleep
 
 class PacketHandler:
    def __init__(self, _port_name, _baud_rate):
-      #port_name = rospy.get_param('~port', '/dev/ttyMotor')
-      #baud_rate = rospy.get_param('~baud', 115200)
-      #_port_name = self.get_parameter_or('/port/name', Parameter('/port/name', Parameter.Type.STRING, '/dev/ttyTHS1')).get_parameter_value().string_value
-      #_port_baudrate = self.get_parameter_or('/port/baudrate', Parameter('/port/baudrate', Parameter.Type.INTEGER, 115200)).get_parameter_value().integer_value
       self.port_name = _port_name
       self.baud_rate = _baud_rate
-      self.ser = serial.Serial(self.port_name, self.baud_rate)
-      self.ser_io = io.TextIOWrapper(io.BufferedRWPair(self.ser, self.ser, 1), 
+      self._ser = serial.Serial(self.port_name, self.baud_rate)
+      self._ser_io = io.TextIOWrapper(io.BufferedRWPair(self._ser, self._ser, 1), 
                                        newline = '\r', 
                                        line_buffering = True)
-
-      self.stop_periodic_comm()
-      self.ser.reset_input_buffer() 
-      self.ser.reset_output_buffer() 
-
-      self.robot_state = {
-            "ENCOD" : [0., 0.],
-            "VW" : [0., 0.],
-            "ODO" : [0., 0.],
-            "POSE" : [0.,0.,0.],
-            "ACCL" : [0., 0., 0.],
-            "GYRO" : [0., 0., 0.],
-            "BAT" : [0., 0., 0.],
-      }
-
+      #self.write_periodic_query_enable(0)
+      self._ser.flushInput()
+      self._ser.reset_input_buffer()
+      self._ser.reset_output_buffer()
       self.incomming_info = ['ODO', 'VW', 'POSE', 'ACCL', 'GYRO']
-      #print('Serial port: %s'%(self.port_name))
+      self._vel = [0.0, 0.0]
+      self._enc = [0.0, 0.0]
+      self._wodom = [0.0, 0.0]
+      self._rpm = [0.0, 0.0]
+      self._wvel = [0.0, 0.0]
+      self._gyro = [0.0, 0.0, 0.0]
+      self._imu = [0.0, 0.0, 0.0]
 
-   def get_port_state(self):
-      return self.ser.isOpen()
-
-   def read_port(self):
-      try:
-         return self.ser_io.readline()
-      except UnicodeDecodeError:
-         print('UnicodeDecodeError during serial comm. start byte')
-
-   def write_port(self, buffer):
-      if self.get_port_state() == True:
-         self.ser.write((buffer + "\r\n").encode())
-      else:
-         print('Serial Port %s is not Opened in Writing process'%(self.port_name))
-
-   def read_packet(self):
-      if self.get_port_state() == True:
-         return self.read_port()
-      else:
-         print('Serial Port %s is not Opened in Reading process'%(self.port_name))
-
-   def update_battery_state(self):
-      self.write_port("$qBAT")
-      sleep(0.01)
-
-   def parser(self):
-      raw_data_o = self.read_packet()
-
-      try:
-         raw_data = raw_data_o.replace('\r', '')
-         raw_data = raw_data.replace('\n', '')
-         raw_data = raw_data.split('#')
-
-         raw_data_split = raw_data[-1].split(',')
-         key = raw_data_split[0]
-      except AttributeError:
-         #rospy.logwarn("AttributeError: 'NoneType' object has no attribute 'replace' : %s ")
-         self.write_port("$cPEEN,1")
-
-      if key in list(self.robot_state.keys()):
-         try:
-            self.robot_state[key] = [float(each) for each in raw_data_split[1:]]
-         except ValueError:
-            #rospy.logwarn("ValueError occupied in parser_R1mini. %s ", raw_data_o)
-            self.write_port("$cPEEN,1")
-
-      return raw_data_o
-
-   def set_periodic_info(self):
+   def set_periodic_info(self, param1):
       for idx, each in enumerate(self.incomming_info):
          #print("$cREGI," + str(idx) + "," + each)
          self.write_port("$cREGI," + str(idx) + "," + each)
 
-      self.update_battery_state()
-      self.write_port("$cPERI,100")
+      self.write_port("$cPERI," + str(param1))
       sleep(0.01)
-      self.write_port("$ENCOD,0")
-      self.write_port("$cPEEN,1")
-      sleep(0.01)
-      self.write_port("$cPEEN,1")
+      self.write_periodic_query_enable(1)
 
-   def stop_periodic_comm(self):
-      self.write_port("$cPEEN,0")
+   def get_port_state(self):
+      return self._ser.isOpen()
+      
+   def read_port(self):
+      return self._rl.readline()
+
+   def close_port(self):
+      print("Port close")
+      self._ser.close()
+
+   def read_packet(self):
+      if self.get_port_state() == True:
+         whole_packet = (self._ser.readline().split(b'\r')[0]).decode("utf-8").strip()
+         if whole_packet:
+            #print(whole_packet)
+            packet = whole_packet.split(',')
+            try:
+               header = packet[0].split('#')[1]
+               if header.startswith('VW'):
+                  self._vel = [float(packet[1]), float(packet[2])]
+               elif header.startswith('ENCOD'):
+                  self._enc = [int(packet[1]), int(packet[2])]
+               elif header.startswith('ODO'):
+                  self._wodom = [float(packet[1]), float(packet[2])]
+               elif header.startswith('RPM'):
+                  self._rpm = [int(packet[1]), int(packet[2])]
+               elif header.startswith('DIFFV'):
+                  self._wvel = [int(packet[1]), int(packet[2])]
+               elif header.startswith('GYRO'):
+                  self._gyro = [float(packet[1]), float(packet[2]), float(packet[3])]
+               elif header.startswith('POSE'):
+                  self._imu = [float(packet[1]), float(packet[2]), float(packet[3])]
+            except:
+               pass
+   
+   def update_battery_state(self):
+      self.write_port("$qBAT")
       sleep(0.01)
+
+   def get_base_velocity(self):
+      return self._vel
+
+   def get_wheel_encoder(self):
+      return self._enc
+
+   def get_wheel_odom(self):
+      return self._wodom
+
+   def get_wheel_rpm(self):
+      return self._rpm
+
+   def get_wheel_velocity(self):
+      return self._wvel
+
+   def write_periodic_query_enable(self, param):
+      self.write_port("$cPEEN," + str(param))
+      sleep(0.05)
+
+   def write_odometry_reset(self):
       self.write_port("$cODO,0")
-      sleep(0.01)
+      sleep(0.05)
 
-   def set_wheel_velocity(self, l_vel, r_vel):
-      self.write_port('$cVW,{:.0f},{:.0f}'.format(l_vel, r_vel))
+   def write_base_velocity(self, lin_vel, ang_vel):
+      # lin_vel : mm/s, ang_vel : mrad/s
+      self.write_port('$CVW,{:.0f},{:.0f}'.format(lin_vel, ang_vel))
 
-   def set_thrust_steer(self, thrust, steer):
-      self.write_port('$cSVO,{:.0f},{:.0f}'.format(thrust, steer))
+   def write_wheel_velocity(self, wheel_l_lin_vel, wheel_r_lin_vel):
+      self.write_port('$CDIFFV,{:.0f},{:.0f}'.format(wheel_l_lin_vel, wheel_r_lin_vel))
+
+   def write_port(self, buffer):
+      if self.get_port_state() == True:
+         self._ser.write((buffer + "\r\n").encode())

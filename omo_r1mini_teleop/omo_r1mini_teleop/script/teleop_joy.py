@@ -56,7 +56,7 @@ class TeleopJoyNode(Node):
         self.qos = QoSProfile(depth=10)
         self.pub_twist = self.create_publisher(Twist, 'cmd_vel', self.qos)
         self.sub = self.create_subscription(Joy, 'joy', self.cb_joy, 10)
-        self.timer = self.create_timer(0.1, self.cb_timer)
+        self.timer = self.create_timer(0.05, self.cb_timer)
         self.twist = Twist()
 
     def cb_joy(self, joymsg):
