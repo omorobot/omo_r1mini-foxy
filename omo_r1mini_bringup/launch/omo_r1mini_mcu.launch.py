@@ -34,7 +34,8 @@ def generate_launch_description():
       executable='omo_r1mini_mcu_node',
       name='omo_r1mini_mcu_node',
       output='screen',
+      emulate_tty=True,
       parameters=[omo_r1mini_mcu_parameter],
-      namespace='/',
+      namespace='',
     )
   ])
