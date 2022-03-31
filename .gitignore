@@ -1,7 +1,5 @@
 *.pyc
 *__pycache__*
-*.log
-*.env
 build/
 install/
 log/
