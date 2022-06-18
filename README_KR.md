@@ -35,7 +35,8 @@ workspace_path 는 ros2의 작업공간입니다(workspace)
 sudo apt install -y ros-foxy-gazebo-ros\
  ros-foxy-cartographer-ros\
  ros-foxy-nav2-map-server\
- ros-foxy-gazebo-ros-pkgs
+ ros-foxy-gazebo-ros-pkgs\
+ ros-foxy-nav2-bringup
 
 pip install pyserial
 ```
