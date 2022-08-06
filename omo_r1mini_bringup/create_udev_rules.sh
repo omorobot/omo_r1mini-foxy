@@ -22,21 +22,8 @@ else
     echo '97-omo-r1-mini-lidar.rules created'
 fi
 
-# if [ -f "/etc/udev/rules.d/ydlidar-V2.rules" ]; then
-#     echo "ydlidar-V2.rules file already exist."
-# else 
-#     echo 'KERNEL=="ttyACM*", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", MODE:="0666", GROUP:="dialout",  SYMLINK+="ttyLiDAR"' >/etc/udev/rules.d/ydlidar-V2.rules
-    
-#     echo 'ydlidar-V2.rules created'
-# fi
-
-# if [ -f "/etc/udev/rules.d/ydlidar-2303.rules" ]; then
-#     echo "ydlidar-2303.rules file already exist."
-# else 
-#     echo 'KERNEL=="ttyUSB*", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", MODE:="0666", GROUP:="dialout",  SYMLINK+="ttyLiDAR"' >/etc/udev/rules.d/ydlidar-2303.rules
-    
-#     echo 'ydlidar-2303.rules created'
-# fi
+systemctl stop nvgetty
+systemctl disable nvgetty
 
 echo ""
 echo "Reload rules"
