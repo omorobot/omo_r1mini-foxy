@@ -24,6 +24,7 @@ class PacketHandler:
       self._wvel = [0.0, 0.0]
       self._gyro = [0.0, 0.0, 0.0]
       self._imu = [0.0, 0.0, 0.0]
+      self._battery = [0.0, 0.0, 0.0]
 
    def set_periodic_info(self, param1):
       for idx, each in enumerate(self.incomming_info):
@@ -66,6 +67,8 @@ class PacketHandler:
                   self._gyro = [float(packet[1]), float(packet[2]), float(packet[3])]
                elif header.startswith('POSE'):
                   self._imu = [float(packet[1]), float(packet[2]), float(packet[3])]
+               elif header.startswith('BAT'):
+                  self._battery = [float(packet[1]), float(packet[2]), float(packet[3])]
             except:
                pass
    
@@ -87,6 +90,9 @@ class PacketHandler:
 
    def get_wheel_velocity(self):
       return self._wvel
+
+   def get_battery_status(self):
+      return self._battery
 
    def write_periodic_query_enable(self, param):
       self.write_port("$cPEEN," + str(param))

@@ -183,9 +183,9 @@ class OMOR1MiniNode(Node):
     d_y = trans_vel * math.sin(self.odom_pose.theta) 
     self.odom_pose.x += d_x * dt
     self.odom_pose.y += d_y * dt
-    print('ODO L:%.2f, R:%.2f, V:%.2f, W=%.2f --> X:%.2f, Y:%.2f, Theta:%.2f'
-      %(odo_l, odo_r, trans_vel, orient_vel, 
-      self.odom_pose.x,self.odom_pose.y,self.odom_pose.theta))
+    #print('ODO L:%.2f, R:%.2f, V:%.2f, W=%.2f --> X:%.2f, Y:%.2f, Theta:%.2f'
+    #  %(odo_l, odo_r, trans_vel, orient_vel, 
+    #  self.odom_pose.x,self.odom_pose.y,self.odom_pose.theta))
     q = quaternion_from_euler(0, 0, self.odom_pose.theta)
 
     self.odom_vel.x = trans_vel
@@ -285,9 +285,9 @@ class OMOR1MiniNode(Node):
     onoff = '0'
     if request.set == True:
       onoff = '1'
-      self.d_setHDLT['switch'] = 1
-    else:
-      self.d_setHDLT['switch'] = 0
+      #self.d_setHDLT['switch'] = 1
+    #else:
+    #  self.d_setHDLT['switch'] = 0
     command = "$cHDLT," + onoff
     self.ph.write_port(command)
     print('SERVICE: Headlight: %s'%(onoff))
@@ -302,7 +302,8 @@ class OMOR1MiniNode(Node):
 
   def cbSrv_checkBattery(self, request, response):
     self.ph.update_battery_state()
-    bat_status = self.ph.robot_state['BAT']
+    #bat_status = self.ph.robot_state['BAT']
+    bat_status = self.ph.get_battery_status()
     if len(bat_status) == 3:
       print("SERVICE: Battery V:%s, SOC: %s, Current %s"
             %(bat_status[0], bat_status[1], bat_status[2]))
