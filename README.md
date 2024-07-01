@@ -20,8 +20,9 @@
 
 ## [ros2 foxy] r1mini SLAM navigation 하기
 ### https://t-shaped-person.tistory.com/199
-
-
+  
+  
+  
 # r1 install
 
 ## [ros2 foxy] r1d2(nuc)에 ubuntu 20.04 설치하기
