@@ -1,106 +1,46 @@
-# ROS2 packages for omorobot r1 mini
+# r1mini install
 
-This project is to demonstrate R1mini control and navigation in ROS2-foxy environment.  
-한국어 사용자는 다음 **한국어**[문서](README_KR.md)를 참조하십시오.  
+## [ros2 foxy] r1mini(jetson nano)에 ubuntu 20.04 설치하기
+### https://t-shaped-person.tistory.com/193
 
-## Build source
+## [ros2 foxy] r1mini(jetson nano)에 ros2 foxy 설치하기
+### https://t-shaped-person.tistory.com/194
 
-### Clone source
+## [ros2 foxy] r1mini에 foxy 패키지 설치하기
+### https://t-shaped-person.tistory.com/195
 
-```bash
-  cd {$workspace_path}/src/
-  git clone https://github.com/omorobot/omo_r1mini-foxy.git
-  git clone https://github.com/PinkWink/YDLidar-SDK.git
-  git clone https://github.com/PinkWink/ydlidar_ros2_driver.git
-```
+## [ros2 foxy] r1mini 용 foxy 원격 PC 설정하기
+### https://t-shaped-person.tistory.com/196
 
-### Build LiDAR's SDK
+## [ros2 foxy] r1mini 원격 제어하기 - teleop
+### https://t-shaped-person.tistory.com/197
 
-```bash
-  cd {$workspace_path}/src/YDLidar-SDK
-  cd build
-  cmake ..
-  make
-  sudo make install
-```
+## [ros2 foxy] r1mini SLAM mapping 하기 - cartographer
+### https://t-shaped-person.tistory.com/198
 
-### Install dependency packages
+## [ros2 foxy] r1mini SLAM navigation 하기
+### https://t-shaped-person.tistory.com/199
 
-Following additional packages may be reuqired to be installed.  
-- gazebo 
-- ros-foxy-gazebo-ros-pkgs
-- cartographer-ros  
-- nav2_map_server
-- pyserial
 
-```bash
-sudo apt install -y ros-foxy-gazebo-ros ros-foxy-cartographer-ros ros-foxy-nav2-map-server ros-foxy-gazebo-ros-pkgs
+# r1 install
 
-pip install pyserial
-```
+## [ros2 foxy] r1d2(nuc)에 ubuntu 20.04 설치하기
+### https://t-shaped-person.tistory.com/202
 
-### Build ROS2 source
+## [ros2 foxy] r1d2(nuc)에 ros2 foxy 설치하기
+### https://t-shaped-person.tistory.com/203
 
-- To build
+## [ros2 foxy] r1d2(nuc)에 foxy 패키지 설치하기
+### https://t-shaped-person.tistory.com/204
 
-```bash
-  cd {$workspace_path}
-  colcon build --symlink-install
-```
+## [ros2 foxy] r1d2 용 foxy 원격 PC 설정하기
+### https://t-shaped-person.tistory.com/205
 
-- To enable the built source into ROS2 environment
+## [ros2 foxy] r1d2 원격 제어하기 - teleop
+### https://t-shaped-person.tistory.com/206
 
-```bash
-  cd {$workspace_path}
-  ./install/setup.bash
-```
+## [ros2 foxy] r1d2 SLAM mapping 하기 - cartographer
+### https://t-shaped-person.tistory.com/207
 
-## Play with the robot
-
-- To give authority for driver access to MCU and LiDAR
-
-```bash
-cd {$workspace_path}/src/omo_r1mini/omo_r1mini_bringup
-sudo sh create_udev_rules.sh
-```
-
-- To bringup robot
-
-```bash
-cd {$workspace_path}
-ros2 launch omo_r1mini_bringup omo_r1mini_bringup.launch.py
-```
-
-- To bringup robot (in **simulation environment**)
-```bash
-cd {$workspace_path}
-ros2 launch omo_r1mini_gazebo omo_r1mini.launch.py
-```
-- To teleoperate the robot using **KEYBOARD**
-
-```bash
-cd {$workspace_path}
-ros2 run omo_r1mini_teleop teleop_keyboard
-```
-
-- To conduct SLAM (Try after few seconds from MCU and LiDAR bringup)
-
-```bash
-cd {$workspace_path}
-ros2 launch omo_r1mini_cartographer cartographer.launch.py
-ros2 launch omo_r1mini_cartographer cartographer_rviz.launch.py
-```
-
-- Once mapping is done, you can create map.pgm and map.yaml file by executing
-
-```bash
-cd {$HOME}
-ros2 run nav2_map_server map_saver_cli -f map
-```
-
-- To conduct path planning & following (Try after few seconds from MCU and LiDAR bringup)
-```bash
-cd {$workspace_path}
-ros2 launch omo_r1mini_navigation2 navigation2.launch.py map:=$HOME/map.yaml
-ros2 launch omo_r1mini_navigation2 navigation2_rviz.launch.py
-```
+## [ros2 foxy] r1d2 SLAM navigation 하기
+### https://t-shaped-person.tistory.com/208
