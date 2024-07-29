@@ -26,7 +26,7 @@ def generate_launch_description():
     'omo_r1mini_lidar_parameter',
     default=os.path.join(
       get_package_share_directory('omo_r1mini_bringup'),
-      'param/omo_r1mini_lidar_x4pro.yaml'
+      'param/omo_r1mini_lidar_x4_pro.yaml'
     )
   )
 
@@ -57,7 +57,7 @@ def generate_launch_description():
     ),
     
     IncludeLaunchDescription(
-      PythonLaunchDescriptionSource([ThisLaunchFileDir(), '/omo_r1mini_lidar.launch.py']),
+      PythonLaunchDescriptionSource([ThisLaunchFileDir(), '/omo_r1mini_lidar_x4pro.launch.py']),
       launch_arguments={'omo_r1mini_lidar_parameter': omo_r1mini_lidar_parameter}.items()
     ),
     
